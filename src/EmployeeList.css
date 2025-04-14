@@ -1,0 +1,393 @@
+/* --- Base and Layout Styles --- */
+
+/* /* Employee List Table */ */
+.employee-list-table {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 0px 16px;
+  position: absolute; /* Note: Absolute positioning might need context */
+  width: 1616px;
+  height: 1064px;
+  left: 296px; /* Note: Fixed positioning */
+  top: 8px;    /* Note: Fixed positioning */
+  background: #FFFFFF;
+  border-radius: 16px;
+  font-family: 'Inter', sans-serif; /* Base font */
+  overflow: hidden; /* Prevent inner content from breaking border radius */
+}
+
+/* /* Header */ Container (Outer) */
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 10px;
+  isolation: isolate;
+  width: 100%;
+  height: 64px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* /* Header */ Inner Content Area */
+.header {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  width: 100%;
+  height: 64px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(80px); /* Note browser support */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  z-index: 1; /* Ensure header is above content */
+}
+
+/* /* Employee List */ Title */
+.employee-list {
+  width: auto;
+  height: 24px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #353535;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+/* /* Tabs + Fullscreen */ Container on the right */
+.tabs-fullscreen-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0px;
+  gap: 20px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+/* /* Search Bar */ (Hidden by default) */
+.search-bar {
+  box-sizing: border-box;
+  display: none; /* Use 'flex' to show */
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 16px;
+  gap: 12px;
+  width: 452px;
+  height: 36px;
+  background: #F9F9F9;
+  border: 1px solid #E8E8E8;
+  border-radius: 1000px;
+  flex: none;
+  order: 0;
+  flex-grow: 1; /* Takes available space if visible */
+}
+
+/* --- Tabs Styles --- */
+
+/* Base styles for tab groups (Hidden by default) */
+.tabs-group-1,
+.tabs-group-2 {
+  box-sizing: border-box;
+  display: none; /* Use 'flex' to show */
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  height: 36px;
+  border: 1px solid #E4E4E4;
+  border-radius: 1000px;
+  flex: none;
+  flex-grow: 0;
+}
+
+.tabs-group-1 {
+  width: 210px;
+  order: 1;
+}
+
+.tabs-group-2 {
+  width: 170px;
+  order: 2;
+}
+
+/* Base style for individual tabs */
+.tab {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 36px;
+  align-self: stretch;
+  flex-grow: 0;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  color: #323A52;
+  box-sizing: border-box; /* Include padding/border in element's total width/height */
+}
+
+/* Specific styles for tabs in group 1 */
+.tabs-group-1 .tab {
+  width: 70px;
+}
+.tab-day { padding: 8px 8px 8px 12px; order: 0; }
+.tab-week { padding: 8px 12px; order: 1; }
+.tab-month { padding: 8px 12px 8px 8px; order: 2; }
+
+/* Specific styles for tabs in group 2 */
+.tabs-group-2 .tab {
+  width: 85px;
+  padding: 8px 12px;
+}
+.tab-ongoing { order: 0; }
+.tab-history { order: 1; }
+
+/* Active state for tabs (Example) */
+.tab.active {
+  background: #FBFCFE;
+  border-radius: 1000px;
+}
+
+/* Text width/height (optional, often handled by content/line-height) */
+.tab-text-day { width: 23px; height: 15px; }
+.tab-text-week { width: 34px; height: 15px; }
+.tab-text-month { width: 39px; height: 15px; }
+.tab-text-ongoing { width: 51px; height: 15px; }
+.tab-text-history { width: 44px; height: 15px; }
+
+
+/* --- Icons --- */
+
+/* /* ArrowsOutSimple */ Fullscreen Icon Wrapper */
+.fullscreen-icon-container {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  flex: none;
+  order: 3;
+  flex-grow: 0;
+  cursor: pointer;
+}
+
+/* /* Vector */ Placeholder for the icon graphic */
+.vector-placeholder {
+  position: absolute;
+  left: 15.62%;
+  right: 15.62%;
+  top: 15.62%;
+  bottom: 15.62%;
+  background: rgba(52, 51, 48, 0.42);
+  /* In a real app, replace this div with an SVG or icon font */
+}
+
+/* --- Main Content and Table Styles --- */
+
+/* /* Employees */ Main Content Area (below header) */
+.employees-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 16px; /* Horizontal padding */
+  gap: 8px;
+  width: 100%;
+  flex: 1 1 auto; /* Grow and shrink to fill remaining space */
+  order: 1;
+  align-self: stretch;
+  overflow: hidden; /* Hide overflow for this area */
+}
+
+/* /* COMPENSATION & BENEFITS */ Label (Hidden by default) */
+.compensation-benefits-label {
+  display: none; /* Use 'block' or 'flex' to show */
+  width: 199px;
+  height: 17px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #817C7C;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+/* /* Table */ Container */
+.table-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  width: 100%;
+  height: 100%; /* Fill parent height */
+  border: 1px solid #E3E3E3;
+  border-radius: 8px;
+  flex: none;
+  order: 0; /* Or 1 if label is shown */
+  align-self: stretch;
+  flex-grow: 0; /* Let parent control size */
+  overflow: hidden; /* Clip content to border-radius */
+}
+
+/* /* Column */ Container for the table columns, enables scrolling */
+.table-column-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start; /* Align headers/cells to top */
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 1; /* Fill the table container */
+  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-x: hidden; /* Prevent horizontal scrolling here */
+}
+
+/* Base styles for a table column */
+.table-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  height: auto; /* Height determined by content */
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+/* Column 1: Department */
+.column-1 {
+  width: 160px;
+  flex: none;
+  order: 0;
+  border-right: 1px solid #E3E3E3; /* Vertical separator */
+}
+
+/* Column 2: Role */
+.column-2 {
+  width: auto; /* Width determined by flex grow */
+  flex: 1 1 auto; /* Grow and shrink */
+  order: 1;
+}
+
+/* /* Tables / Atom / Header */ Cell Style */
+.table-header-cell {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px;
+  gap: 4px;
+  width: 100%;
+  height: 72px;
+  background: #F5F5F5;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  position: sticky; /* Make header sticky */
+  top: 0;          /* Stick to top of scrollable container */
+  z-index: 1;      /* Stay above scrolling content */
+}
+
+/* /* ✏️ Header Title */ Text Style */
+.table-header-text {
+  height: 15px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.01em;
+  color: #817C7C;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  white-space: nowrap;
+}
+
+.dept-header { width: 46px; }
+.role-header { width: 47px; }
+
+/* /* Tables / Atom / Cell */ Data Cell Style */
+.table-data-cell {
+  box-sizing: border-box;
+  display: flex;
+  align-items: stretch; /* Stretch inner content vertically */
+  padding: 0px;
+  width: 100%;
+  height: 72px;
+  background: #FFFFFF;
+  border-bottom: 1px solid #F1F1F1;
+  flex: none;
+  /* order: set inline via style prop based on map index */
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* /* Text Link */ Container inside data cell */
+.text-link-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Vertically center content */
+  padding: 16px;
+  gap: 16px;
+  width: 100%;
+  height: 100%;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 1;
+}
+
+/* /* Details */ Container for the primary text */
+.details-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 4px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  overflow: hidden; /* Prevent text overflow */
+}
+
+/* Style for the actual text within a data cell */
+.cell-text {
+  height: 17px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.01em;
+  color: #353535;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  white-space: nowrap; /* Prevent wrapping */
+  overflow: hidden; /* Hide overflow */
+  text-overflow: ellipsis; /* Add ellipsis */
+  width: 100%; /* Allow text to take width before ellipsis */
+}
