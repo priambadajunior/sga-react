@@ -1,6 +1,6 @@
 /* --- Base and Layout Styles --- */
 
-/* /* Employee List Table */ */
+/* Employee List Table */
 .employee-list-table {
   box-sizing: border-box;
   display: flex;
@@ -217,21 +217,6 @@
   overflow: hidden; /* Hide overflow for this area */
 }
 
-/* /* COMPENSATION & BENEFITS */ /* Label (Hidden by default) */
-.compensation-benefits-label {
-  display: none; /* Use 'block' or 'flex' to show */
-  width: 199px;
-  height: 17px;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 17px;
-  color: #817C7C;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-}
-
 /* /* Table */ /* Container */
 .table-container {
   box-sizing: border-box;
@@ -250,7 +235,7 @@
   overflow: hidden; /* Clip content to border-radius */
 }
 
-/* /* Column */ Container for the table columns, enables scrolling */
+/* /* Column */ /* Container for the table columns, enables scrolling */
 .table-column-container {
   display: flex;
   flex-direction: row;
@@ -276,7 +261,7 @@
   flex-shrink: 0; /* Prevent shrinking */
 }
 
-/* Column 1: Department */
+/* Column 1: Division */
 .column-1 {
   width: 160px;
   flex: none;
@@ -286,12 +271,70 @@
 
 /* Column 2: Role */
 .column-2 {
-  width: auto; /* Width determined by flex grow */
-  flex: 1 1 auto; /* Grow and shrink */
+  width: 412px; /* Width determined by flex grow */
+  flex: none; /* Grow and shrink */
   order: 1;
+  border-right: 1px solid #E3E3E3; /* Vertical separator */
 }
 
-/* /* Tables / Atom / Header */ Cell Style */
+/* Column 3: EE ID */
+.column-3 {
+  width: 75; /* Width determined by flex grow */
+  flex: none; /* Grow and shrink */
+  order: 1;
+  border-right: 1px solid #E3E3E3; /* Vertical separator */
+}
+
+/* Column 4: Employee Name */
+.column-4 {
+  /* Username */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+
+  width: 412px;
+  height: 1152px;
+
+
+  /* Inside auto layout */
+  flex: none;
+  order: 3;
+  flex-grow: 1;
+}
+
+/* Tables / Atom / Cell */
+.name-email {
+  box-sizing: border-box;
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+
+  width: 412px;
+  height: 72px;
+
+  background: #FFFFFF;
+  border-bottom: 1px solid #F1F1F1;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* /* Tables / Atom / Header */ /* Cell Style */
 .table-header-cell {
   box-sizing: border-box;
   display: flex;
@@ -311,7 +354,7 @@
   z-index: 1;      /* Stay above scrolling content */
 }
 
-/* /* ✏️ Header Title */ Text Style */
+/* /* ✏️ Header Title */ /* Text Style */
 .table-header-text {
   height: 15px;
   font-style: normal;
@@ -329,7 +372,7 @@
 .dept-header { width: 46px; }
 .role-header { width: 47px; }
 
-/* /* Tables / Atom / Cell */ Data Cell Style */
+/* /* Tables / Atom / Cell */ /* Data Cell Style */
 .table-data-cell {
   box-sizing: border-box;
   display: flex;
@@ -345,7 +388,7 @@
   flex-grow: 0;
 }
 
-/* /* Text Link */ Container inside data cell */
+/* /* Text Link */ /* Container inside data cell */
 .text-link-container {
   display: flex;
   flex-direction: row;
@@ -360,7 +403,7 @@
   flex-grow: 1;
 }
 
-/* /* Details */ Container for the primary text */
+/* /* Details */ /* Container for the primary text */
 .details-container {
   display: flex;
   flex-direction: column;

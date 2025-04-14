@@ -4,21 +4,21 @@ import './EmployeeList.css'; // Import the CSS file
 // Sample data for the table - replace with your actual data
 // Assuming each object represents a row with data for both columns
 const tableData = [
-  { id: 1, department: 'Product Design', role: 'Senior UI/UX Designer' },
-  { id: 2, department: 'Finance', role: 'Financial Planning & Reporting Manager' },
-  { id: 3, department: 'Legal', role: 'Paralegal' },
-  { id: 4, department: 'Engineering', role: 'Software Engineer II' },
-  { id: 5, department: 'Marketing', role: 'Content Strategist' },
-  { id: 6, department: 'Human Resources', role: 'Recruiter' },
-  { id: 7, department: 'Sales', role: 'Account Executive' },
-  { id: 8, department: 'Product Management', role: 'Product Manager' },
-  { id: 9, department: 'Customer Support', role: 'Support Specialist' },
-  { id: 10, department: 'Data Science', role: 'Data Analyst' },
-  { id: 11, department: 'Operations', role: 'Operations Coordinator' },
-  { id: 12, department: 'Design', role: 'Graphic Designer' },
-  { id: 13, department: 'IT', role: 'System Administrator' },
-  { id: 14, department: 'Executive', role: 'Chief of Staff' },
-  { id: 15, department: 'Internship', role: 'Summer Intern' },
+  { id: 1, department: 'Product Design', role: 'Senior UI/UX Designer', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id'},
+  { id: 2, department: 'Finance', role: 'Financial Planning & Reporting Manager', eeid: '00143' },
+  { id: 3, department: 'Legal', role: 'Paralegal', eeid: '00143' },
+  { id: 4, department: 'Engineering', role: 'Software Engineer II', eeid: '00143' },
+  { id: 5, department: 'Marketing', role: 'Content Strategist', eeid: '00143' },
+  { id: 6, department: 'Human Resources', role: 'Recruiter', eeid: '00143' },
+  { id: 7, department: 'Sales', role: 'Account Executive', eeid: '00143' },
+  { id: 8, department: 'Product Management', role: 'Product Manager', eeid: '00143' },
+  { id: 9, department: 'Customer Support', role: 'Support Specialist', eeid: '00143' },
+  { id: 10, department: 'Data Science', role: 'Data Analyst', eeid: '00143' },
+  { id: 11, department: 'Operations', role: 'Operations Coordinator', eeid: '00143' },
+  { id: 12, department: 'Design', role: 'Graphic Designer', eeid: '00143' },
+  { id: 13, department: 'IT', role: 'System Administrator', eeid: '00143' },
+  { id: 14, department: 'Executive', role: 'Chief of Staff', eeid: '00143' },
+  { id: 15, department: 'Internship', role: 'Summer Intern', eeid: '00143' },
   // Add more rows as needed
 ];
 
@@ -31,40 +31,13 @@ const EmployeeList = () => {
       
       <div className="header-container">
         <div className="header">
-          Employee List  - Title
+          {/* Employee List  - Title */}
           <span className="employee-list">Employee List</span>
 
-          {/* Tabs + Fullscreen  - Right side controls */}
-          <div className="tabs-fullscreen-container">
-
-            {/* Search Bar  (Hidden by default - controlled via CSS or conditional rendering) */}
-            <div className="search-bar">
-              {/* Placeholder for search icon and input */}
-              <span style={{opacity: 0.5}}>🔍 Search...</span>
-            </div>
-
-            {/* Tabs  Group 1 (Day/Week/Month) (Hidden by default) */}
-            <div className="tabs-group-1">
-                <div className="tab tab-day"><span className="tab-text-day">Day</span></div>
-                <div className="tab tab-week active"><span className="tab-text-week">Week</span></div> {/* Active Example */}
-                <div className="tab tab-month"><span className="tab-text-month">Month</span></div>
-            </div>
-
-             {/* Tabs  Group 2 (Ongoing/History) (Hidden by default) */}
-             <div className="tabs-group-2">
-                <div className="tab tab-ongoing active"><span className="tab-text-ongoing">Ongoing</span></div> {/* Active Example */}
-                <div className="tab tab-history"><span className="tab-text-history">History</span></div>
-            </div>
-
-            /* ArrowsOutSimple */ - Fullscreen Icon
-            <div className="fullscreen-icon-container" title="Fullscreen">
-               <div className="vector-placeholder"></div> {/* Visual placeholder for icon */}
-            </div>
-          </div>
         </div>
       </div> {/* End Header Section */}
 
-      /* Employees */ - Main content area below header
+      {/* Employees - Main content area below header */}
       <div className="employees-content">
 
           {/* COMPENSATION & BENEFITS  Label (Hidden by default) */}
@@ -80,7 +53,7 @@ const EmployeeList = () => {
                  <div className="table-column column-1">
                      {/* Column 1 Header */}
                      <div className="table-header-cell">
-                         <span className="table-header-text dept-header">DEPT.</span>
+                         <span className="table-header-text dept-header">Division</span>
                      </div>
                      {/* Column 1 Data Cells - Mapped from data */}
                      {tableData.map((row, index) => (
@@ -104,7 +77,7 @@ const EmployeeList = () => {
                  <div className="table-column column-2">
                      {/* Column 2 Header */}
                      <div className="table-header-cell">
-                          <span className="table-header-text role-header">ROLE</span>
+                          <span className="table-header-text role-header">Position</span>
                      </div>
                      {/* Column 2 Data Cells - Mapped from data */}
                      {tableData.map((row, index) => (
@@ -123,6 +96,55 @@ const EmployeeList = () => {
                           </div>
                      ))}
                  </div> {/* End Column 2 */}
+
+                {/* Column 3: EE ID */}
+                <div className="table-column column-3">
+                     {/* Column 3 Header */}
+                     <div className="table-header-cell">
+                          <span className="table-header-text eeid-header">EE ID</span>
+                     </div>
+                     {/* Column 3 Data Cells - Mapped from data */}
+                     {tableData.map((row, index) => (
+                          // /* Tables / Atom / Cell */
+                          <div key={`col3-${row.id || index}`} className="table-data-cell" style={{ order: index + 1 }}>
+                              {/* Text Link  */}
+                             <div className="text-link-container">
+                                 { /* Details */ }
+                                 <div className="details-container">
+                                     { /* Senior UI/UX Designer  Financial Planning...  etc. */ }
+                                     <span className="cell-text">
+                                         {row.eeid}
+                                     </span>
+                                 </div>
+                             </div>
+                          </div>
+                     ))}
+                 </div> {/* End Column 3 */}
+
+                {/* Column 4: Employee Name */}
+                <div className="column-4">
+                     {/* Column 4 Header */}
+                     <div className="table-header-cell">
+                          <span className="table-header-text eeid-header">Employee Name</span>
+                     </div>
+                     {/* Column 4 Data Cells - Mapped from data */}
+                     {tableData.map((row, index) => (
+                          // /* Tables / Atom / Cell */
+                          <div key={`col4-${row.id || index}`} className="name-email" style={{ order: index + 1 }}>
+                              {/* Text Link  */}
+                             <div className="text-link-container">
+                                 { /* Details */ }
+                                 <div className="details-container">
+                                     { /* Senior UI/UX Designer  Financial Planning...  etc. */ }
+                                     <span className="cell-text">
+                                         {row.name}
+                                         {row.email}
+                                     </span>
+                                 </div>
+                             </div>
+                          </div>
+                     ))}
+                 </div> {/* End Column 4 */}
 
                  {/* Add more columns here by repeating the pattern */}
 
