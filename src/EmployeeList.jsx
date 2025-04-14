@@ -138,6 +138,9 @@ const EmployeeList = () => {
                                      { /* Senior UI/UX Designer  Financial Planning...  etc. */ }
                                      <span className="cell-text">
                                          {row.name}
+                                        
+                                     </span>
+                                     <span className="cell-text-2">
                                          {row.email}
                                      </span>
                                  </div>
