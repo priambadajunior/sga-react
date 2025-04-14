@@ -18,7 +18,7 @@
   overflow: hidden; /* Prevent inner content from breaking border radius */
 }
 
-/* /* Header */ Container (Outer) */
+/* /* Header */ /* Container (Outer) */
 .header-container {
   display: flex;
   flex-direction: column;
@@ -34,7 +34,7 @@
   flex-grow: 0;
 }
 
-/* /* Header */ Inner Content Area */
+/* /* Header */ /* Inner Content Area */
 .header {
   box-sizing: border-box;
   display: flex;
@@ -54,7 +54,7 @@
   z-index: 1; /* Ensure header is above content */
 }
 
-/* /* Employee List */ Title */
+/* /* Employee List */ /* Title */
 .employee-list {
   width: auto;
   height: 24px;
@@ -68,7 +68,7 @@
   flex-grow: 0;
 }
 
-/* /* Tabs + Fullscreen */ Container on the right */
+/* /* Tabs + Fullscreen */ /* Container on the right */
 .tabs-fullscreen-container {
   display: flex;
   flex-direction: row;
@@ -81,7 +81,7 @@
   flex-grow: 0;
 }
 
-/* /* Search Bar */ (Hidden by default) */
+/* Search Bar (Hidden by default) */
 .search-bar {
   box-sizing: border-box;
   display: none; /* Use 'flex' to show */
@@ -179,7 +179,7 @@
 
 /* --- Icons --- */
 
-/* /* ArrowsOutSimple */ Fullscreen Icon Wrapper */
+/* /* ArrowsOutSimple */ /* Fullscreen Icon Wrapper */
 .fullscreen-icon-container {
   width: 24px;
   height: 24px;
@@ -190,7 +190,7 @@
   cursor: pointer;
 }
 
-/* /* Vector */ Placeholder for the icon graphic */
+/* /* Vector */ /* Placeholder for the icon graphic */
 .vector-placeholder {
   position: absolute;
   left: 15.62%;
@@ -203,7 +203,7 @@
 
 /* --- Main Content and Table Styles --- */
 
-/* /* Employees */ Main Content Area (below header) */
+/* /* Employees */ /* Main Content Area (below header) */
 .employees-content {
   display: flex;
   flex-direction: column;
@@ -217,7 +217,7 @@
   overflow: hidden; /* Hide overflow for this area */
 }
 
-/* /* COMPENSATION & BENEFITS */ Label (Hidden by default) */
+/* /* COMPENSATION & BENEFITS */ /* Label (Hidden by default) */
 .compensation-benefits-label {
   display: none; /* Use 'block' or 'flex' to show */
   width: 199px;
@@ -232,7 +232,7 @@
   flex-grow: 0;
 }
 
-/* /* Table */ Container */
+/* /* Table */ /* Container */
 .table-container {
   box-sizing: border-box;
   display: flex;
