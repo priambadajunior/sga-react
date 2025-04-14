@@ -149,6 +149,50 @@ const EmployeeList = () => {
                      ))}
                  </div> {/* End Column 4 */}
 
+                 {/* Column 5: Skills Gap*/}
+                 <div className="table-column column-5">
+                   <div className="rumah-title">
+                     <div className="table-header-skill-gap-cell">
+                          <span className="table-header-text skill-gap-header">Skill Gap</span>
+                     </div>
+                     <div className='rumah-subheader'>
+                        <div className="table-subheader-skill-gap-cell">
+                          <span className="table-header-text overall-header">Overall Technical Skill</span>
+                        </div>
+                        <div className="table-subheader-skill-gap-cell">  
+                          <span className="table-header-text must-have-header">Must-Have Technical Skill</span>
+                        </div>
+                        <div className="table-subheader-skill-gap-cell">
+                          <span className="table-header-text nice-to-have-header">Nice-to-Have Technical Skill</span>
+                        </div>
+                        <div className="table-subheader-skill-gap-cell">
+                          <span className="table-header-text overall-header">Overall Soft Skill</span>
+                        </div>
+                        <div className="table-subheader-skill-gap-cell">  
+                          <span className="table-header-text must-have-header">Must-Have Soft Skill</span>
+                        </div>
+                        <div className="table-subheader-skill-gap-cell">
+                          <span className="table-header-text nice-to-have-header">Nice-to-Have Soft Skill</span>
+                        </div>
+                     </div>
+                   </div>
+                     {tableData.map((row, index) => (
+                          // /* Tables / Atom / Cell */
+                          <div key={`col5-${row.id || index}`} className="table-data-cell" style={{ order: index + 1 }}>
+                              {/* Text Link  */}
+                             <div className="text-link-container">
+                                 { /* Details */ }
+                                 <div className="details-container">
+                                     
+                                     <span className="cell-text">
+                                         {row.skillGap}
+                                     </span>
+                                 </div>
+                             </div>
+                          </div>
+                     ))}
+                 </div> {/* End Column 2 */}
+
                  {/* Add more columns here by repeating the pattern */}
 
              </div> {/* End Column Container (Scrollable Area) */}
