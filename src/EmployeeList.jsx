@@ -65,7 +65,7 @@ const EmployeeList = () => {
       </div> {/* End Header Section */}
 
       {/* /* Employees */ - Main content area below header */}
-      <div className="orders-content">
+      <div className="employees-content">
 
          {/* /* COMPENSATION & BENEFITS */ Label (Hidden by default) */}
          <div className="compensation-benefits-label">COMPENSATION & BENEFITS</div>
