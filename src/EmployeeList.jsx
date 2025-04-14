@@ -5,20 +5,20 @@ import './EmployeeList.css'; // Import the CSS file
 // Assuming each object represents a row with data for both columns
 const tableData = [
   { id: 1, department: 'Product Design', role: 'Senior UI/UX Designer', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id'},
-  { id: 2, department: 'Finance', role: 'Financial Planning & Reporting Manager', eeid: '00143' },
-  { id: 3, department: 'Legal', role: 'Paralegal', eeid: '00143' },
-  { id: 4, department: 'Engineering', role: 'Software Engineer II', eeid: '00143' },
-  { id: 5, department: 'Marketing', role: 'Content Strategist', eeid: '00143' },
-  { id: 6, department: 'Human Resources', role: 'Recruiter', eeid: '00143' },
-  { id: 7, department: 'Sales', role: 'Account Executive', eeid: '00143' },
-  { id: 8, department: 'Product Management', role: 'Product Manager', eeid: '00143' },
-  { id: 9, department: 'Customer Support', role: 'Support Specialist', eeid: '00143' },
-  { id: 10, department: 'Data Science', role: 'Data Analyst', eeid: '00143' },
-  { id: 11, department: 'Operations', role: 'Operations Coordinator', eeid: '00143' },
-  { id: 12, department: 'Design', role: 'Graphic Designer', eeid: '00143' },
-  { id: 13, department: 'IT', role: 'System Administrator', eeid: '00143' },
-  { id: 14, department: 'Executive', role: 'Chief of Staff', eeid: '00143' },
-  { id: 15, department: 'Internship', role: 'Summer Intern', eeid: '00143' },
+  { id: 2, department: 'Finance', role: 'Financial Planning & Reporting Manager', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id' },
+  { id: 3, department: 'Legal', role: 'Paralegal', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id' },
+  { id: 4, department: 'Engineering', role: 'Software Engineer II', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id' },
+  { id: 5, department: 'Marketing', role: 'Content Strategist', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id' },
+  { id: 6, department: 'Human Resources', role: 'Recruiter', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id' },
+  { id: 7, department: 'Sales', role: 'Account Executive', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id' },
+  { id: 8, department: 'Product Management', role: 'Product Manager', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id' },
+  { id: 9, department: 'Customer Support', role: 'Support Specialist', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id' },
+  { id: 10, department: 'Data Science', role: 'Data Analyst', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id' },
+  { id: 11, department: 'Operations', role: 'Operations Coordinator', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id' },
+  { id: 12, department: 'Design', role: 'Graphic Designer', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id' },
+  { id: 13, department: 'IT', role: 'System Administrator', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id' },
+  { id: 14, department: 'Executive', role: 'Chief of Staff', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id' },
+  { id: 15, department: 'Internship', role: 'Summer Intern', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id' },
   // Add more rows as needed
 ];
 
@@ -73,7 +73,7 @@ const EmployeeList = () => {
                      ))}
                  </div> {/* End Column 1 */}
 
-                 {/* Column 2: Role */}
+                 {/* Column 2: Position */}
                  <div className="table-column column-2">
                      {/* Column 2 Header */}
                      <div className="table-header-cell">
@@ -130,7 +130,7 @@ const EmployeeList = () => {
                      {/* Column 4 Data Cells - Mapped from data */}
                      {tableData.map((row, index) => (
                           // /* Tables / Atom / Cell */
-                          <div key={`col4-${row.id || index}`} className="name-email" style={{ order: index + 1 }}>
+                          <div key={`col4-${row.id || index}`} className="table-data-cell" style={{ order: index + 1 }}>
                               {/* Text Link  */}
                              <div className="text-link-container">
                                  { /* Details */ }
@@ -140,7 +140,7 @@ const EmployeeList = () => {
                                          {row.name}
                                         
                                      </span>
-                                     <span className="cell-text-2">
+                                     <span className="cell-text-email">
                                          {row.email}
                                      </span>
                                  </div>
