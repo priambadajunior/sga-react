@@ -28,35 +28,35 @@ const EmployeeList = () => {
     // /* Employees Section */ - Outermost container
     <div className="employee-list-table">
 
-      {/* /* Header */ - Top header bar */}
+      
       <div className="header-container">
         <div className="header">
-          {/* /* Employee List */ - Title */}
+          Employee List  - Title
           <span className="employee-list">Employee List</span>
 
-          {/* /* Tabs + Fullscreen */ - Right side controls */}
+          {/* Tabs + Fullscreen  - Right side controls */}
           <div className="tabs-fullscreen-container">
 
-            {/* /* Search Bar */ (Hidden by default - controlled via CSS or conditional rendering) */}
+            {/* Search Bar  (Hidden by default - controlled via CSS or conditional rendering) */}
             <div className="search-bar">
               {/* Placeholder for search icon and input */}
               <span style={{opacity: 0.5}}>🔍 Search...</span>
             </div>
 
-            {/* /* Tabs */ Group 1 (Day/Week/Month) (Hidden by default) */}
+            {/* Tabs  Group 1 (Day/Week/Month) (Hidden by default) */}
             <div className="tabs-group-1">
                 <div className="tab tab-day"><span className="tab-text-day">Day</span></div>
                 <div className="tab tab-week active"><span className="tab-text-week">Week</span></div> {/* Active Example */}
                 <div className="tab tab-month"><span className="tab-text-month">Month</span></div>
             </div>
 
-            {/* /* Tabs */ Group 2 (Ongoing/History) (Hidden by default) */}
+             {/* Tabs  Group 2 (Ongoing/History) (Hidden by default) */}
              <div className="tabs-group-2">
                 <div className="tab tab-ongoing active"><span className="tab-text-ongoing">Ongoing</span></div> {/* Active Example */}
                 <div className="tab tab-history"><span className="tab-text-history">History</span></div>
             </div>
 
-            {/* /* ArrowsOutSimple */ - Fullscreen Icon */}
+            /* ArrowsOutSimple */ - Fullscreen Icon
             <div className="fullscreen-icon-container" title="Fullscreen">
                <div className="vector-placeholder"></div> {/* Visual placeholder for icon */}
             </div>
@@ -64,16 +64,16 @@ const EmployeeList = () => {
         </div>
       </div> {/* End Header Section */}
 
-      {/* /* Employees */ - Main content area below header */}
+      /* Employees */ - Main content area below header
       <div className="employees-content">
 
-         {/* /* COMPENSATION & BENEFITS */ Label (Hidden by default) */}
+          {/* COMPENSATION & BENEFITS  Label (Hidden by default) */}
          <div className="compensation-benefits-label">COMPENSATION & BENEFITS</div>
 
-         {/* /* Table */ - The main table structure */}
+          {/* Table  - The main table structure */}
          <div className="table-container">
 
-             {/* /* Column */ - Container for columns, enables scrolling */}
+              {/* Column  - Container for columns, enables scrolling */}
              <div className="table-column-container">
 
                  {/* Column 1: Department */}
@@ -86,11 +86,11 @@ const EmployeeList = () => {
                      {tableData.map((row, index) => (
                          // /* Tables / Atom / Cell */
                          <div key={`col1-${row.id || index}`} className="table-data-cell" style={{ order: index + 1 }}>
-                            {/* /* Text Link */ */}
+                            { /* Text Link */ }
                             <div className="text-link-container">
-                                {/* /* Details */ */}
+                                { /* Details */ }
                                 <div className="details-container">
-                                    {/* /* Product Design */ / /* General Counsel */ etc. */}
+                                    {/* /* Product Design */ /* General Counsel  etc. */}
                                     <span className="cell-text">
                                         {row.department}
                                     </span>
@@ -110,11 +110,11 @@ const EmployeeList = () => {
                      {tableData.map((row, index) => (
                           // /* Tables / Atom / Cell */
                           <div key={`col2-${row.id || index}`} className="table-data-cell" style={{ order: index + 1 }}>
-                             {/* /* Text Link */ */}
+                              {/* Text Link  */}
                              <div className="text-link-container">
-                                 {/* /* Details */ */}
+                                 { /* Details */ }
                                  <div className="details-container">
-                                     {/* /* Senior UI/UX Designer */ / /* Financial Planning... */ etc. */}
+                                     { /* Senior UI/UX Designer  Financial Planning...  etc. */ }
                                      <span className="cell-text">
                                          {row.role}
                                      </span>
