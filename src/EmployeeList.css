@@ -217,6 +217,21 @@
   overflow: hidden; /* Hide overflow for this area */
 }
 
+/* /* COMPENSATION & BENEFITS */ /* Label (Hidden by default) */
+.compensation-benefits-label {
+  display: none; /* Use 'block' or 'flex' to show */
+  width: 199px;
+  height: 17px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #817C7C;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
 /* /* Table */ /* Container */
 .table-container {
   box-sizing: border-box;
@@ -304,35 +319,6 @@
   order: 3;
   flex-grow: 1;
 }
-
-/* Tables / Atom / Cell */
-.name-email {
-  box-sizing: border-box;
-
-  /* Auto layout */
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0px;
-
-  width: 412px;
-  height: 72px;
-
-  background: #FFFFFF;
-  border-bottom: 1px solid #F1F1F1;
-
-  /* Inside auto layout */
-  flex: none;
-  order: 1;
-  align-self: stretch;
-  flex-grow: 0;
-}
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-flex-grow: 0;
-
 
 /* /* Tables / Atom / Header */ /* Cell Style */
 .table-header-cell {
