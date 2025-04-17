@@ -1,14 +1,14 @@
-import './App.css';
+import './MainFrame.css'; // Assuming you save the CSS in MainFrame.css
 import SideBar from './SideBar'; // Importing SideBar
 import EmployeeList from './EmployeeList'; // Importing EmployeeList
 
-function App() {
+function MainFrame() {
   return (
-    <div className="App">
+    <div className="MainFrame">
         <SideBar />
         <EmployeeList />
     </div>
   );
 }
 
-export default App;
+export default MainFrame;
