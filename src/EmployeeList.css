@@ -10,7 +10,10 @@
   position: relative; /* Note: Absolute positioning might need context */
   width: 100%;
   height: 100%;
+
+
   background: #FFFFFF;
+
   font-family: 'Inter', sans-serif; /* Base font */
   border-radius: 16px;
   overflow: hidden; /* Prevent inner content from breaking border radius */
@@ -19,10 +22,10 @@
 /* /* Header */ /* Container (Outer) */
 .header-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: flex-start;
   padding: 0px;
-  gap: 0px;
+  gap: 10px;
   isolation: isolate;
   width: 100%;
   height: 64px;
@@ -40,9 +43,11 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  gap: 0px;
+  gap: 20px;
   width: 100%;
   height: 64px;
+
+
   flex: none;
   
   align-self: stretch;
@@ -77,16 +82,23 @@
   flex-grow: 0;
 }
 
-/* Full Screen Icon */
-.header-fullscreen-icon{
-  width: 24px;
-  height: 24px;
-  
-  /* Inside auto layout */
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* --- Tabs Styles --- */
 
@@ -208,6 +220,21 @@
   overflow: hidden; /* Hide overflow for this area */
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* /* Table */ /* Container */
 .table-container {
   box-sizing: border-box;
@@ -224,6 +251,7 @@
    /* Or 1 if label is shown */
   align-self: stretch;
   flex-grow: 1; /* Let parent control size */
+
 }
 
 /* /* Column */ /* Container for the table columns, enables scrolling */
@@ -256,6 +284,7 @@
 .column-1 {
   width: 160px;
   flex: none;
+
   border-right: 1px solid #E3E3E3; /* Vertical separator */
 }
 
@@ -263,6 +292,7 @@
 .column-2 {
   width: 260px; /* Width determined by flex grow */
   flex: none; /* Grow and shrink */
+
   border-right: 1px solid #E3E3E3; /* Vertical separator */
 }
 
@@ -270,6 +300,7 @@
 .column-3 {
   width: 75px; /* Width determined by flex grow */
   flex: none;
+
   border-right: 1px solid #E3E3E3; /* Vertical separator */
   position: sticky
 }
@@ -295,10 +326,35 @@
   width: fit-content;
   height: 1152px;
 
+
+
   /* Inside auto layout */
   flex: none;
   
   flex-grow: 0;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 .header-with-subheader-container{
@@ -307,10 +363,14 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+
+
   height: 72px;
   background: #F5F5F5;
   
+
   align-self: stretch;
+
   position: sticky; /* Make header sticky */
   top: 0;          /* Stick to top of scrollable container */
   z-index: 1;
@@ -325,11 +385,23 @@
   align-items: center;
   gap: 4px;
 
+
+
+
+
+
+
+
+
   width: 100%;
   height: 36px;
 
   background: #F5F5F5;
   border-bottom: 1px solid #E3E3E3;
+
+
+
+
 
   display: flex;
   flex: 1;
@@ -344,6 +416,16 @@
 
 .subheader-cell{
   /* Sub-Header */
+
+
+
+
+
+
+
+
+
+
 
   /* Auto layout */
   display: flex;
@@ -379,6 +461,8 @@
   background: #F5F5F5;
   flex: auto;
   flex-grow: 1;
+
+
   position: sticky; /* Make header sticky */
   top: 0;       /* Stick to top of scrollable container */
   z-index: 0;      /* Stay above scrolling content */
@@ -405,6 +489,9 @@
 }
 
 /* /* Data Cell Style */
+
+
+
 .table-data-cell {
   box-sizing: border-box;
   display: flex;
@@ -416,6 +503,7 @@
   background: #FFFFFF;
   border-bottom: 1px solid #F1F1F1;
   flex: none;
+
   flex-grow: 0;
 }
 
@@ -423,11 +511,17 @@
 .row-container {
   box-sizing: border-box;
   display: flex;
+
   align-items: center; /* Vertically center content */
   padding: 16px;
   gap: 16px;
   width: 100%;
   height: 72px;
+
+
+
+
+
 }
 
 /* /* Details */ /* Container for the primary text */
@@ -443,6 +537,7 @@
   flex: none;
   
   flex-grow: 0;
+
 }
 
 /* Style for the actual text within a data cell */
@@ -458,6 +553,9 @@
   flex-shrink: 1;
   
   white-space: normal;
+
+
+
   width: 100%; /* Allow text to take width before ellipsis */
 }
 
@@ -482,5 +580,57 @@ color: #817C7C;
 flex: none;
 order: 1;
 flex-grow: 0;
+}
 
+/* Skill Gap Stuff */
+.row-container-skill-gap {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  gap: 0px;
+  width: 100%;
+  height: 72px;
+}
+.row-chips {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 202px;
+  height: 100%;
+  border-right: 1px solid #E3E3E3;
+}
+  .row-chips:last-child{
+    border-right: none;
+  }
+/* Skill Gap Chips */
+.skill-gap-chips{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 12px;
+  gap: 4px;
+
+  width: 64px;
+  height: 25px;
+
+  background: #C5FFD3;
+  border-radius: 1000px;
+}
+.skill-gap-value{
+  width: 22px;
+  height: 17px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.01em;
+
+  color: #353535;
 }
