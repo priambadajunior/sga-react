@@ -9,7 +9,15 @@ function Sidebar() {
     // This function will be executed when the button is clicked
     // You can perform any other actions here, like updating state,
     // making API calls, etc.
-  };  
+  };
+  // const [isSidebarVisible, setIsSidebarVisible] = useState(false);
+  // const handleMouseEnter = () => {
+  //   setIsSidebarVisible(true);
+  // };
+  // const handleMouseLeave = () => {
+  //   setIsSidebarVisible(false);
+  // };
+
   return (
     <div className="sidebar-box">
       <div className="sidebar-logo_menus-box">

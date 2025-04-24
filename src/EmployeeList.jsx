@@ -1,24 +1,25 @@
 import React from 'react';
 import './EmployeeList.css'; // Import the CSS file
+import fullscreen from './assets/fullscreen.svg';
 
 // Sample data for the table - replace with your actual data
 // Assuming each object represents a row with data for both columns
 const tableData = [
   { id: 1, division: 'Product Design', role: 'Senior UI/UX Designer', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id', OTSG: '6%', MTSG: '1%', NTSG: '6%', OSSG: '1%', MSSG: '1%', NSSG: '6%'},
-  { id: 2, division: 'Finance', role: 'Financial Planning & Reporting Manager', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id' },
-  { id: 3, division: 'Legal', role: 'Paralegal', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id' },
-  { id: 4, division: 'Engineering', role: 'Software Engineer II', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id' },
-  { id: 5, division: 'Marketing', role: 'Content Strategist', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id' },
-  { id: 6, division: 'Human Resources', role: 'Recruiter', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id' },
-  { id: 7, division: 'Sales', role: 'Account Executive', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id' },
-  { id: 8, division: 'Product Management', role: 'Product Manager', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id' },
-  { id: 9, division: 'Customer Support', role: 'Support Specialist', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id' },
-  { id: 10, division: 'Data Science', role: 'Data Analyst', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id' },
-  { id: 11, division: 'Operations', role: 'Operations Coordinator', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id' },
-  { id: 12, division: 'Design', role: 'Graphic Designer', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id' },
-  { id: 13, division: 'IT', role: 'System Administrator', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id' },
-  { id: 14, division: 'Executive', role: 'Chief of Staff', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id' },
-  { id: 15, division: 'Internship', role: 'Summer Intern', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id' },
+  { id: 2, division: 'Finance', role: 'Financial Planning & Reporting Manager', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id', OTSG: '6%', MTSG: '1%', NTSG: '6%', OSSG: '1%', MSSG: '1%', NSSG: '6%' },
+  { id: 3, division: 'Legal', role: 'Paralegal', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id', OTSG: '6%', MTSG: '1%', NTSG: '6%', OSSG: '1%', MSSG: '1%', NSSG: '6%' },
+  { id: 4, division: 'Engineering', role: 'Software Engineer II', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id', OTSG: '6%', MTSG: '1%', NTSG: '6%', OSSG: '1%', MSSG: '1%', NSSG: '6%' },
+  { id: 5, division: 'Marketing', role: 'Content Strategist', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id', OTSG: '6%', MTSG: '1%', NTSG: '6%', OSSG: '1%', MSSG: '1%', NSSG: '6%' },
+  { id: 6, division: 'Human Resources', role: 'Recruiter', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id', OTSG: '6%', MTSG: '1%', NTSG: '6%', OSSG: '1%', MSSG: '1%', NSSG: '6%' },
+  { id: 7, division: 'Sales', role: 'Account Executive', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id', OTSG: '6%', MTSG: '1%', NTSG: '6%', OSSG: '1%', MSSG: '1%', NSSG: '6%' },
+  { id: 8, division: 'Product Management', role: 'Product Manager', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id', OTSG: '6%', MTSG: '1%', NTSG: '6%', OSSG: '1%', MSSG: '1%', NSSG: '6%' },
+  { id: 9, division: 'Customer Support', role: 'Support Specialist', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id', OTSG: '6%', MTSG: '1%', NTSG: '6%', OSSG: '1%', MSSG: '1%', NSSG: '6%' },
+  { id: 10, division: 'Data Science', role: 'Data Analyst', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id', OTSG: '6%', MTSG: '1%', NTSG: '6%', OSSG: '1%', MSSG: '1%', NSSG: '6%' },
+  { id: 11, division: 'Operations', role: 'Operations Coordinator', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id', OTSG: '6%', MTSG: '1%', NTSG: '6%', OSSG: '1%', MSSG: '1%', NSSG: '6%' },
+  { id: 12, division: 'Design', role: 'Graphic Designer', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id', OTSG: '6%', MTSG: '1%', NTSG: '6%', OSSG: '1%', MSSG: '1%', NSSG: '6%' },
+  { id: 13, division: 'IT', role: 'System Administrator', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id', OTSG: '6%', MTSG: '1%', NTSG: '6%', OSSG: '1%', MSSG: '1%', NSSG: '6%' },
+  { id: 14, division: 'Executive', role: 'Chief of Staff', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id', OTSG: '6%', MTSG: '1%', NTSG: '6%', OSSG: '1%', MSSG: '1%', NSSG: '6%' },
+  { id: 15, division: 'Internship', role: 'Summer Intern', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id', OTSG: '6%', MTSG: '1%', NTSG: '6%', OSSG: '1%', MSSG: '1%', NSSG: '6%' },
   // Add more rows as needed
 ];
 
@@ -29,10 +30,12 @@ const EmployeeList = () => {
     <div className="employee-list-table">
       <div className="header-container">
         <div className="header">
-          {/* Table Name */}
           <div className="table-name">Employee List</div>
+          <div className="header-fullscreen-icon">
+              <img src={fullscreen} alt="View table in full screen"/>
+          </div>
         </div>
-      </div> {/* End Header Section */}
+      </div>
 
       {/* Employees - Main content area below header */}
       <div className="employees-content">

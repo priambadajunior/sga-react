@@ -19,10 +19,10 @@
 /* /* Header */ /* Container (Outer) */
 .header-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
   padding: 0px;
-  gap: 10px;
+  gap: 0px;
   isolation: isolate;
   width: 100%;
   height: 64px;
@@ -40,7 +40,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  gap: 20px;
+  gap: 0px;
   width: 100%;
   height: 64px;
   flex: none;
@@ -78,7 +78,7 @@
 }
 
 /* Full Screen Icon */
-.header-fullscreen{
+.header-fullscreen-icon{
   width: 24px;
   height: 24px;
   
