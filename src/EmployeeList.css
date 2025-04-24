@@ -77,6 +77,17 @@
   flex-grow: 0;
 }
 
+/* Full Screen Icon */
+.header-fullscreen{
+  width: 24px;
+  height: 24px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
 /* --- Tabs Styles --- */
 
 /* Base styles for tab groups (Hidden by default) */
