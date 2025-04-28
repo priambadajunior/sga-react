@@ -5,9 +5,9 @@ import fullscreen from './assets/fullscreen.svg';
 // Sample data for the table - replace with your actual data
 // Assuming each object represents a row with data for both columns
 const tableData = [
-  { id: 1, division: 'Product Design', role: 'Senior UI/UX Designer', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id', OTSG: '6%', MTSG: '1%', NTSG: '6%', OSSG: '1%', MSSG: '1%', NSSG: '6%'},
-  { id: 2, division: 'Finance', role: 'Financial Planning & Reporting Manager', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id', OTSG: '6%', MTSG: '1%', NTSG: '6%', OSSG: '1%', MSSG: '1%', NSSG: '6%' },
-  { id: 3, division: 'Legal', role: 'Paralegal', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id', OTSG: '6%', MTSG: '1%', NTSG: '6%', OSSG: '1%', MSSG: '1%', NSSG: '6%' },
+  { id: 1, division: 'Product Design', role: 'Senior UI/UX Designer', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id', OTSG: '50%', MTSG: '1%', NTSG: '6%', OSSG: '1%', MSSG: '1%', NSSG: '6%'},
+  { id: 2, division: 'Finance', role: 'Financial Planning & Reporting Manager', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id', OTSG: '-5%', MTSG: '1%', NTSG: '6%', OSSG: '1%', MSSG: '1%', NSSG: '6%' },
+  { id: 3, division: 'Legal', role: 'Paralegal', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id', OTSG: '33%', MTSG: '0%', NTSG: '6%', OSSG: '1%', MSSG: '1%', NSSG: '6%' },
   { id: 4, division: 'Engineering', role: 'Software Engineer II', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id', OTSG: '6%', MTSG: '1%', NTSG: '6%', OSSG: '1%', MSSG: '1%', NSSG: '6%' },
   { id: 5, division: 'Marketing', role: 'Content Strategist', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id', OTSG: '6%', MTSG: '1%', NTSG: '6%', OSSG: '1%', MSSG: '1%', NSSG: '6%' },
   { id: 6, division: 'Human Resources', role: 'Recruiter', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id', OTSG: '6%', MTSG: '1%', NTSG: '6%', OSSG: '1%', MSSG: '1%', NSSG: '6%' },
@@ -24,6 +24,16 @@ const tableData = [
 ];
 
 const EmployeeList = () => {
+
+  const getBackgroundColor = (value) => {
+    const numericValue = parseFloat(value.replace('%', ''));
+    if (numericValue < 0) return '#A9e8ff';
+    if (numericValue === 0) return '#00E339';
+    if (numericValue <= 25) return '#C5FFD3'; // light green
+    if (numericValue <= 50) return '#FFDEA9';
+    if (numericValue > 50) return '#FF484B';
+    return 'transparent'; // default color
+  };
   // --- JSX Structure using className for styling ---
   return (
     // /* Employees Section */ - Outermost container
@@ -175,42 +185,42 @@ const EmployeeList = () => {
                               {/* Text Link  */}
                              <div className="row-container-skill-gap">
                                 <div className="row-chips">
-                                  <span className="skill-gap-chips">
+                                  <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(row.OTSG) }}>
                                     <span className='skill-gap-value'>
                                     {row.OTSG}
                                     </span>
                                   </span>
                                 </div>
                                 <div className="row-chips">
-                                  <span className="skill-gap-chips">
+                                  <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(row.MTSG) }}>
                                     <span className='skill-gap-value'>
                                     {row.MTSG}
                                     </span>
                                   </span>
                                 </div>
                                 <div className="row-chips">
-                                  <span className="skill-gap-chips">
+                                  <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(row.NTSG) }}>
                                     <span className='skill-gap-value'>
                                     {row.NTSG}
                                     </span>
                                   </span>
                                 </div>
                                 <div className="row-chips">
-                                  <span className="skill-gap-chips">
+                                  <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(row.OSSG) }}>
                                     <span className='skill-gap-value'>
                                     {row.OSSG}
                                     </span>
                                   </span>
                                 </div>
                                 <div className="row-chips">
-                                  <span className="skill-gap-chips">
+                                  <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(row.MSSG) }}>
                                     <span className='skill-gap-value'>
                                     {row.MSSG}
                                     </span>
                                   </span>
                                 </div>
                                 <div className="row-chips">
-                                  <span className="skill-gap-chips">
+                                  <span className="skill-gap-chips"   style={{ backgroundColor: getBackgroundColor(row.NSSG) }}>
                                     <span className='skill-gap-value'>
                                     {row.NSSG}
                                     </span>
