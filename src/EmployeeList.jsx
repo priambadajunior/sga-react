@@ -1,6 +1,8 @@
 import React from 'react';
 import './EmployeeList.css'; // Import the CSS file
 import fullscreen from './assets/fullscreen.svg';
+import profilepicture40 from './assets/profilepicture40.svg';
+import { useNavigate } from 'react-router-dom';
 
 // Sample data for the table - replace with your actual data
 // Assuming each object represents a row with data for both columns
@@ -34,6 +36,13 @@ const EmployeeList = () => {
     if (numericValue > 50) return '#FF484B';
     return 'transparent'; // default color
   };
+
+  const navigate = useNavigate();
+
+  const handleRowClick = (eeid) => {
+    navigate(`/employee/${eeid}`);
+  };
+
   // --- JSX Structure using className for styling ---
   return (
     // /* Employees Section */ - Outermost container
@@ -62,7 +71,12 @@ const EmployeeList = () => {
                      {/* Column 1 Data Cells - Mapped from data */}
                      {tableData.map((row, index) => (
                          // /* Tables / Atom / Cell */
-                         <div key={`col1-${row.id || index}`} className="table-data-cell" style={{ order: index + 1 }}>
+                         <div 
+                         key={`col1-${row.id || index}`}
+                         className="table-data-cell"
+                         style={{ order: index + 1, cursor: 'pointer' }} 
+                        //  key={eeid}
+                         onClick={() => handleRowClick()}>
                             { /* Text Link */ }
                             <div className="row-container">
                                 { /* Details */ }
@@ -138,6 +152,7 @@ const EmployeeList = () => {
                               {/* Text Link  */}
                              <div className="row-container">
                                  { /* Details */ }
+                                 <img src={profilepicture40}/>
                                  <div className="row-text">
                                      { /* Senior UI/UX Designer  Financial Planning...  etc. */ }
                                      <span className="cell-text">
