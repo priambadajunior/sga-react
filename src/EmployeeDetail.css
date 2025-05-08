@@ -640,3 +640,226 @@ flex-grow: 0;
   align-self: stretch;
   flex-grow: 1;
 }
+
+.table-name-container {
+  /* Container for Technical/Soft Skills Title + Full Screen Icon */
+  
+  box-sizing: border-box;
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  gap: 4px;
+  
+  width: 100%;
+  height: 56px;
+  
+  border-bottom: 1px solid #E3E3E3;
+  
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.table-name {
+  /* Container for Technical/Soft Skills Title */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+
+  width: max-content;
+  height: 19px;
+
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+
+.active-table-text {
+  /* Text Style for Current Active Table */
+
+  width: fit-content;
+  height: 19px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.01em;
+
+  color: #817C7C;
+
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.inactive-table-text {
+  /* Text Style for Inactive Table */
+
+  width: fit-content;
+  height: 19px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.01em;
+
+  color: #CFCFCF;
+
+
+  /* Inside auto layout */
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+}
+
+.skills-table-container {
+  /* Table Container */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+
+  width: 100%;
+  height: 100%;
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.table-title-container {
+ /* Table Title Container */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+
+  width: 100%;
+  height: 49px;
+
+  border-bottom: 1px;
+  border-color: #E3E3E3;
+
+  flex: none;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.table-title {
+  /* Table Title Container */
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  gap: 4px;
+
+  width: 50%;
+  height: 49px;
+
+  background: #F5F5F5;
+
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+
+.table-row-container {
+/* Row Container for 2 Columns Skill */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+
+width: 100%;
+height: 77px;
+
+
+/* Inside auto layout */
+flex: none;
+align-self: stretch;
+flex-grow: 0;
+}
+
+.skills-cell-container {
+  /* Individual Cell Container */
+
+  box-sizing: border-box;
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+
+  width: 516px;
+  height: 77px;
+
+  background: #FFFFFF;
+  border-width: 0px 1px 1px 0px;
+  border-style: solid;
+  border-color: #F1F1F1;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+
+.skills-name_level-container {
+  /* Skill Name + Level Container */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px;
+  gap: 16px;
+
+  width: 50%;
+  height: 25px;
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.skills-level-container {
+  /* Skills Level + Chips Container */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 12px;
+
+  width: 116px;
+  height: 25px;
+
+  flex: none;
+  flex-grow: 0;
+}
