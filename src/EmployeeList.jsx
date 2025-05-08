@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 // Sample data for the table - replace with your actual data
 // Assuming each object represents a row with data for both columns
-const tableData = [
+export const tableData = [
   { id: 1, division: 'Product Design', role: 'Senior UI/UX Designer', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id', OTSG: '50%', MTSG: '1%', NTSG: '6%', OSSG: '1%', MSSG: '1%', NSSG: '6%'},
   { id: 2, division: 'Finance', role: 'Financial Planning & Reporting Manager', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id', OTSG: '-5%', MTSG: '1%', NTSG: '6%', OSSG: '1%', MSSG: '1%', NSSG: '6%' },
   { id: 3, division: 'Legal', role: 'Paralegal', eeid: '00143', name: 'Kadek Wikananda Laksmana Priambada', email: 'priambadajunior@talentspace.id', OTSG: '33%', MTSG: '0%', NTSG: '6%', OSSG: '1%', MSSG: '1%', NSSG: '6%' },
@@ -25,17 +25,18 @@ const tableData = [
   // Add more rows as needed
 ];
 
-const EmployeeList = () => {
+export const getBackgroundColor = (value) => {
+  const numericValue = parseFloat(value.replace('%', ''));
+  if (numericValue < 0) return '#A9e8ff';
+  if (numericValue === 0) return '#00E339';
+  if (numericValue <= 25) return '#C5FFD3'; // light green
+  if (numericValue <= 50) return '#FFDEA9';
+  if (numericValue > 50) return '#FF484B';
+  return 'transparent'; // default color
+};
 
-  const getBackgroundColor = (value) => {
-    const numericValue = parseFloat(value.replace('%', ''));
-    if (numericValue < 0) return '#A9e8ff';
-    if (numericValue === 0) return '#00E339';
-    if (numericValue <= 25) return '#C5FFD3'; // light green
-    if (numericValue <= 50) return '#FFDEA9';
-    if (numericValue > 50) return '#FF484B';
-    return 'transparent'; // default color
-  };
+export const EmployeeList = () => {
+
 
   const navigate = useNavigate();
 
