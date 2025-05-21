@@ -377,7 +377,10 @@ flex-grow: 0;
   order: 0;
   align-self: stretch;
   flex-grow: 0;
-  overflow-y: scroll;
+}
+
+.employee-details-bottom-container:hover {
+  overflow-y: auto;
 }
 
 .employee-details-section-container {
@@ -601,6 +604,11 @@ flex-grow: 0;
   /* Reporting To [Full Name] */
   width: 100%;
   height: fit-content;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* This is the magic number! */
+  text-overflow: ellipsis; /* Still needed for the ellipsis */
 
   font-family: 'Inter';
   font-style: normal;
@@ -740,7 +748,11 @@ flex-grow: 0;
   order: 0;
   align-self: stretch;
   flex-grow: 0;
+}
+
+.skills-table-container:hover {
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .table-title-container {

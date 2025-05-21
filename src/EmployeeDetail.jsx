@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './EmployeeDetail.css'; // Import the CSS file
 import EmployeeList, { tableData, getBackgroundColor } from './EmployeeList.jsx';
 import back from './assets/back.svg';
@@ -106,12 +106,12 @@ const EmployeeDetail = () => {
                         <div className='reporting-to-profile-picture-container'>
                           <img src={profilepicture40} class="responsive-image" alt="Employee Profile Picture"/>
                         </div>
-                        <div className='reporting-to-fullname_email-container' style={{flex: 1}}>
+                        <div className='reporting-to-fullname_email-container' style={{overflow: "hidden", flex: 1}}>
                           <div className='reporting-to-fullname-text'>
                             Komang Priambada
                           </div>
-                          <div className='employee-email_title-text' style={{flex: 1}}>
-                            komangpriambada@talentspace.id
+                          <div className='employee-email_title-text' style={{overflow: 'hidden', flex: 1}}>
+                            <TruncatedMarqueeOnHover text="komangpriambada@talentspace.id"/>
                           </div>
                         </div>
                       </div>
@@ -132,12 +132,12 @@ const EmployeeDetail = () => {
                         <div className='reporting-to-profile-picture-container'>
                           <img src={profilepicture40} class="responsive-image" alt="Employee Profile Picture"/>
                         </div>
-                        <div className='reporting-to-fullname_email-container'>
+                        <div className='reporting-to-fullname_email-container' style={{overflow: "hidden", flex: 1}}>
                           <div className='reporting-to-fullname-text'>
-                            Komang Priambada
+                            Daniel Febryan Dewanda
                           </div>
-                          <div className='employee-email_title-text'>
-                            komangpriambada@talentspace.id
+                          <div className='employee-email_title-text' style={{overflow: 'hidden', flex: 1}}>
+                            <TruncatedMarqueeOnHover text="danielfebryandewanda@talentspace.id"/>
                           </div>
                         </div>
                       </div>
@@ -208,7 +208,7 @@ const EmployeeDetail = () => {
                   <div className='skills-name_progressbar'>
                     <div className='skills-name_level-container'>
                       {/* Skill Name */}
-                      <div className='reporting-to-fullname-text' style={{ fontSize: '14px', flex: 1 }}>
+                      <div className='reporting-to-fullname-text' style={{ fontSize: '14px', flex: 1, height: "38px" }}>
                       Corporate Governance - Company Law & Corporate Secretarial Practice {/* Change Skill Name Here */}
                       </div>
                       <div className='skills-level-container'>
@@ -264,174 +264,7 @@ const EmployeeDetail = () => {
                   <div className='skills-name_progressbar'>
                     <div className='skills-name_level-container'>
                       {/* Skill Name */}
-                      <div className='reporting-to-fullname-text' style={{ fontSize: '14px', flex: 1 }}>
-                      Corporate Governance - Company Law & Corporate Secretarial Practice {/* Change Skill Name Here */}
-                      </div>
-                      <div className='skills-level-container'>
-                        <div className='employee-email_title-text' style={{ flex: 1 }}>
-                          3 of 5 {/* Change Current Skill Level of Expected Here */}
-                        </div>
-                        {/* <div className="row-chips">
-                          {tableData.map(item => (
-                            <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(item.NSSG) }}>
-                              <span className='skill-gap-value'>
-                                {item.NSSG}
-                              </span>
-                            </span>
-                          ))}
-                        </div> */}
-                      </div>
-                    </div>
-                    <div className='skill-progress-bar'>
-                      <div className='skill-progress-bar-fill' style={{background: '#FF484B', border: '1.5px solid #AA0F12', width: '39%'}}></div>
-                    </div> </div>
-                </div>
-              </div>
-              <div className='table-row-container'>
-                <div className='skills-cell-container'>
-                  <div className='skills-name_progressbar'>
-                    <div className='skills-name_level-container'>
-                      {/* Skill Name */}
-                      <div className='reporting-to-fullname-text' style={{ fontSize: '14px', flex: 1 }}>
-                      Design System {/* Change Skill Name Here */}
-                      </div>
-                      <div className='skills-level-container'>
-                        <div className='employee-email_title-text' style={{ flex: 1 }}>
-                          3 of 5 {/* Change Current Skill Level of Expected Here */}
-                        </div>
-                        {/* <div className="row-chips">
-                          {tableData.map(item => (
-                            <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(item.NSSG) }}>
-                              <span className='skill-gap-value'>
-                                {item.NSSG}
-                              </span>
-                            </span>
-                          ))}
-                        </div> */}
-                      </div>
-                    </div>
-                    <div className='skill-progress-bar'>
-                      <div className='skill-progress-bar-fill' style={{background: '#C5FFD3', border: '1.5px solid #3FE266', width: '94%'}}></div>
-                    </div>
-                  </div>
-                </div>
-                <div className='skills-cell-container'>
-                  <div className='skills-name_progressbar'>
-                    <div className='skills-name_level-container'>
-                      {/* Skill Name */}
-                      <div className='reporting-to-fullname-text' style={{ fontSize: '14px', flex: 1 }}>
-                      Corporate Governance - Company Law & Corporate Secretarial Practice {/* Change Skill Name Here */}
-                      </div>
-                      <div className='skills-level-container'>
-                        <div className='employee-email_title-text' style={{ flex: 1 }}>
-                          3 of 5 {/* Change Current Skill Level of Expected Here */}
-                        </div>
-                        {/* <div className="row-chips">
-                          {tableData.map(item => (
-                            <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(item.NSSG) }}>
-                              <span className='skill-gap-value'>
-                                {item.NSSG}
-                              </span>
-                            </span>
-                          ))}
-                        </div> */}
-                      </div>
-                    </div>
-                    <div className='skill-progress-bar'>
-                      <div className='skill-progress-bar-fill' style={{background: '#FF484B', border: '1.5px solid #AA0F12', width: '39%'}}></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className='table-row-container'>
-                <div className='skills-cell-container'>
-                  <div className='skills-name_progressbar'>
-                    <div className='skills-name_level-container'>
-                      {/* Skill Name */}
-                      <div className='reporting-to-fullname-text' style={{ fontSize: '14px', flex: 1 }}>
-                      Design System {/* Change Skill Name Here */}
-                      </div>
-                      <div className='skills-level-container'>
-                        <div className='employee-email_title-text' style={{ flex: 1 }}>
-                          3 of 5 {/* Change Current Skill Level of Expected Here */}
-                        </div>
-                        {/* <div className="row-chips">
-                          {tableData.map(item => (
-                            <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(item.NSSG) }}>
-                              <span className='skill-gap-value'>
-                                {item.NSSG}
-                              </span>
-                            </span>
-                          ))}
-                        </div> */}
-                      </div>
-                    </div>
-                    <div className='skill-progress-bar'>
-                      <div className='skill-progress-bar-fill' style={{background: '#C5FFD3', border: '1.5px solid #3FE266', width: '94%'}}></div>
-                    </div>
-                  </div>
-                </div>
-                <div className='skills-cell-container'>
-                  <div className='skills-name_progressbar'>
-                    <div className='skills-name_level-container'>
-                      {/* Skill Name */}
-                      <div className='reporting-to-fullname-text' style={{ fontSize: '14px', flex: 1 }}>
-                      Corporate Governance - Company Law & Corporate Secretarial Practice {/* Change Skill Name Here */}
-                      </div>
-                      <div className='skills-level-container'>
-                        <div className='employee-email_title-text' style={{ flex: 1 }}>
-                          3 of 5 {/* Change Current Skill Level of Expected Here */}
-                        </div>
-                        {/* <div className="row-chips">
-                          {tableData.map(item => (
-                            <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(item.NSSG) }}>
-                              <span className='skill-gap-value'>
-                                {item.NSSG}
-                              </span>
-                            </span>
-                          ))}
-                        </div> */}
-                      </div>
-                    </div>
-                    <div className='skill-progress-bar'>
-                      <div className='skill-progress-bar-fill' style={{background: '#FF484B', border: '1.5px solid #AA0F12', width: '39%'}}></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className='table-row-container'>
-                <div className='skills-cell-container'>
-                  <div className='skills-name_progressbar'>
-                    <div className='skills-name_level-container'>
-                      {/* Skill Name */}
-                      <div className='reporting-to-fullname-text' style={{ fontSize: '14px', flex: 1 }}>
-                      Design System {/* Change Skill Name Here */}
-                      </div>
-                      <div className='skills-level-container'>
-                        <div className='employee-email_title-text' style={{ flex: 1 }}>
-                          3 of 5 {/* Change Current Skill Level of Expected Here */}
-                        </div>
-                        {/* <div className="row-chips">
-                          {tableData.map(item => (
-                            <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(item.NSSG) }}>
-                              <span className='skill-gap-value'>
-                                {item.NSSG}
-                              </span>
-                            </span>
-                          ))}
-                        </div> */}
-                      </div>
-                    </div>
-                    <div className='skill-progress-bar'>
-                      <div className='skill-progress-bar-fill' style={{background: '#C5FFD3', border: '1.5px solid #3FE266', width: '94%'}}></div>
-                    </div>
-                  </div>
-                </div>
-                <div className='skills-cell-container'>
-                  <div className='skills-name_progressbar'>
-                    <div className='skills-name_level-container'>
-                      {/* Skill Name */}
-                      <div className='reporting-to-fullname-text' style={{ fontSize: '14px', flex: 1 }}>
+                      <div className='reporting-to-fullname-text' style={{ fontSize: '14px', flex: 1, height: "38px" }}>
                       Corporate Governance - Company Law & Corporate Secretarial Practice {/* Change Skill Name Here */}
                       </div>
                       <div className='skills-level-container'>
@@ -486,7 +319,7 @@ const EmployeeDetail = () => {
                   <div className='skills-name_progressbar'>
                     <div className='skills-name_level-container'>
                       {/* Skill Name */}
-                      <div className='reporting-to-fullname-text' style={{ fontSize: '14px', flex: 1 }}>
+                      <div className='reporting-to-fullname-text' style={{ fontSize: '14px', flex: 1, height: "38px" }}>
                       Corporate Governance - Company Law & Corporate Secretarial Practice {/* Change Skill Name Here */}
                       </div>
                       <div className='skills-level-container'>
@@ -542,7 +375,7 @@ const EmployeeDetail = () => {
                   <div className='skills-name_progressbar'>
                     <div className='skills-name_level-container'>
                       {/* Skill Name */}
-                      <div className='reporting-to-fullname-text' style={{ fontSize: '14px', flex: 1 }}>
+                      <div className='reporting-to-fullname-text' style={{ fontSize: '14px', flex: 1, height: "38px" }}>
                       Corporate Governance - Company Law & Corporate Secretarial Practice {/* Change Skill Name Here */}
                       </div>
                       <div className='skills-level-container'>
@@ -598,7 +431,7 @@ const EmployeeDetail = () => {
                   <div className='skills-name_progressbar'>
                     <div className='skills-name_level-container'>
                       {/* Skill Name */}
-                      <div className='reporting-to-fullname-text' style={{ fontSize: '14px', flex: 1 }}>
+                      <div className='reporting-to-fullname-text' style={{ fontSize: '14px', flex: 1, height: "38px" }}>
                       Corporate Governance - Company Law & Corporate Secretarial Practice {/* Change Skill Name Here */}
                       </div>
                       <div className='skills-level-container'>
@@ -653,7 +486,174 @@ const EmployeeDetail = () => {
                   <div className='skills-name_progressbar'>
                     <div className='skills-name_level-container'>
                       {/* Skill Name */}
+                      <div className='reporting-to-fullname-text' style={{ fontSize: '14px', flex: 1, height: "38px" }}>
+                      Corporate Governance - Company Law & Corporate Secretarial Practice {/* Change Skill Name Here */}
+                      </div>
+                      <div className='skills-level-container'>
+                        <div className='employee-email_title-text' style={{ flex: 1 }}>
+                          3 of 5 {/* Change Current Skill Level of Expected Here */}
+                        </div>
+                        {/* <div className="row-chips">
+                          {tableData.map(item => (
+                            <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(item.NSSG) }}>
+                              <span className='skill-gap-value'>
+                                {item.NSSG}
+                              </span>
+                            </span>
+                          ))}
+                        </div> */}
+                      </div>
+                    </div>
+                    <div className='skill-progress-bar'>
+                      <div className='skill-progress-bar-fill' style={{background: '#FF484B', border: '1.5px solid #AA0F12', width: '39%'}}></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className='table-row-container'>
+                <div className='skills-cell-container'>
+                  <div className='skills-name_progressbar'>
+                    <div className='skills-name_level-container'>
+                      {/* Skill Name */}
                       <div className='reporting-to-fullname-text' style={{ fontSize: '14px', flex: 1 }}>
+                      Design System {/* Change Skill Name Here */}
+                      </div>
+                      <div className='skills-level-container'>
+                        <div className='employee-email_title-text' style={{ flex: 1 }}>
+                          3 of 5 {/* Change Current Skill Level of Expected Here */}
+                        </div>
+                        {/* <div className="row-chips">
+                          {tableData.map(item => (
+                            <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(item.NSSG) }}>
+                              <span className='skill-gap-value'>
+                                {item.NSSG}
+                              </span>
+                            </span>
+                          ))}
+                        </div> */}
+                      </div>
+                    </div>
+                    <div className='skill-progress-bar'>
+                      <div className='skill-progress-bar-fill' style={{background: '#C5FFD3', border: '1.5px solid #3FE266', width: '94%'}}></div>
+                    </div>
+                  </div>
+                </div>
+                <div className='skills-cell-container'>
+                  <div className='skills-name_progressbar'>
+                    <div className='skills-name_level-container'>
+                      {/* Skill Name */}
+                      <div className='reporting-to-fullname-text' style={{ fontSize: '14px', flex: 1, height: "38px" }}>
+                      Corporate Governance - Company Law & Corporate Secretarial Practice {/* Change Skill Name Here */}
+                      </div>
+                      <div className='skills-level-container'>
+                        <div className='employee-email_title-text' style={{ flex: 1 }}>
+                          3 of 5 {/* Change Current Skill Level of Expected Here */}
+                        </div>
+                        {/* <div className="row-chips">
+                          {tableData.map(item => (
+                            <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(item.NSSG) }}>
+                              <span className='skill-gap-value'>
+                                {item.NSSG}
+                              </span>
+                            </span>
+                          ))}
+                        </div> */}
+                      </div>
+                    </div>
+                    <div className='skill-progress-bar'>
+                      <div className='skill-progress-bar-fill' style={{background: '#FF484B', border: '1.5px solid #AA0F12', width: '39%'}}></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className='table-row-container'>
+                <div className='skills-cell-container'>
+                  <div className='skills-name_progressbar'>
+                    <div className='skills-name_level-container'>
+                      {/* Skill Name */}
+                      <div className='reporting-to-fullname-text' style={{ fontSize: '14px', flex: 1 }}>
+                      Design System {/* Change Skill Name Here */}
+                      </div>
+                      <div className='skills-level-container'>
+                        <div className='employee-email_title-text' style={{ flex: 1 }}>
+                          3 of 5 {/* Change Current Skill Level of Expected Here */}
+                        </div>
+                        {/* <div className="row-chips">
+                          {tableData.map(item => (
+                            <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(item.NSSG) }}>
+                              <span className='skill-gap-value'>
+                                {item.NSSG}
+                              </span>
+                            </span>
+                          ))}
+                        </div> */}
+                      </div>
+                    </div>
+                    <div className='skill-progress-bar'>
+                      <div className='skill-progress-bar-fill' style={{background: '#C5FFD3', border: '1.5px solid #3FE266', width: '94%'}}></div>
+                    </div>
+                  </div>
+                </div>
+                <div className='skills-cell-container'>
+                  <div className='skills-name_progressbar'>
+                    <div className='skills-name_level-container'>
+                      {/* Skill Name */}
+                      <div className='reporting-to-fullname-text' style={{ fontSize: '14px', flex: 1, height: "38px" }}>
+                      Corporate Governance - Company Law & Corporate Secretarial Practice {/* Change Skill Name Here */}
+                      </div>
+                      <div className='skills-level-container'>
+                        <div className='employee-email_title-text' style={{ flex: 1 }}>
+                          3 of 5 {/* Change Current Skill Level of Expected Here */}
+                        </div>
+                        {/* <div className="row-chips">
+                          {tableData.map(item => (
+                            <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(item.NSSG) }}>
+                              <span className='skill-gap-value'>
+                                {item.NSSG}
+                              </span>
+                            </span>
+                          ))}
+                        </div> */}
+                      </div>
+                    </div>
+                    <div className='skill-progress-bar'>
+                      <div className='skill-progress-bar-fill' style={{background: '#FF484B', border: '1.5px solid #AA0F12', width: '39%'}}></div>
+                    </div> </div>
+                </div>
+              </div>
+              <div className='table-row-container'>
+                <div className='skills-cell-container'>
+                  <div className='skills-name_progressbar'>
+                    <div className='skills-name_level-container'>
+                      {/* Skill Name */}
+                      <div className='reporting-to-fullname-text' style={{ fontSize: '14px', flex: 1 }}>
+                      Design System {/* Change Skill Name Here */}
+                      </div>
+                      <div className='skills-level-container'>
+                        <div className='employee-email_title-text' style={{ flex: 1 }}>
+                          3 of 5 {/* Change Current Skill Level of Expected Here */}
+                        </div>
+                        {/* <div className="row-chips">
+                          {tableData.map(item => (
+                            <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(item.NSSG) }}>
+                              <span className='skill-gap-value'>
+                                {item.NSSG}
+                              </span>
+                            </span>
+                          ))}
+                        </div> */}
+                      </div>
+                    </div>
+                    <div className='skill-progress-bar'>
+                      <div className='skill-progress-bar-fill' style={{background: '#C5FFD3', border: '1.5px solid #3FE266', width: '94%'}}></div>
+                    </div>
+                  </div>
+                </div>
+                <div className='skills-cell-container'>
+                  <div className='skills-name_progressbar'>
+                    <div className='skills-name_level-container'>
+                      {/* Skill Name */}
+                      <div className='reporting-to-fullname-text' style={{ fontSize: '14px', flex: 1, height: "38px" }}>
                       Corporate Governance - Company Law & Corporate Secretarial Practice {/* Change Skill Name Here */}
                       </div>
                       <div className='skills-level-container'>
@@ -684,4 +684,107 @@ const EmployeeDetail = () => {
     )
 };
   
+
+// Truncated Marquee on Hover Component
+const TruncatedMarqueeOnHover = ({ text }) => {
+  const containerRef = useRef(null);
+  const textRef = useRef(null);
+  const [isHovered, setIsHovered] = useState(false);
+  const [isTruncated, setIsTruncated] = useState(false);
+  const [scrollDistance, setScrollDistance] = useState(0);
+  const [animationDuration, setAnimationDuration] = useState('0s');
+
+  useEffect(() => {
+    // Measure text and container width to determine if truncation is needed
+    const checkTruncation = () => {
+      if (containerRef.current && textRef.current) {
+        const containerWidth = containerRef.current.offsetWidth;
+        const textWidth = textRef.current.scrollWidth;
+
+        // Determine if text is longer than its container
+        const truncated = textWidth > containerWidth;
+        setIsTruncated(truncated);
+
+        if (truncated) {
+          // Calculate the distance the text needs to scroll to reveal its full content
+          // Add a small buffer to ensure the end of the text is fully visible
+          const distance = textWidth - containerWidth;
+          setScrollDistance(distance);
+
+          // Calculate animation duration based on scroll distance (e.g., 50 pixels per second)
+          const duration = distance / 50; // Adjust speed as needed
+          setAnimationDuration(`${duration}s`);
+        } else {
+          setScrollDistance(0);
+          setAnimationDuration('0s');
+        }
+      }
+    };
+
+    // Run check on mount and window resize
+    checkTruncation();
+    window.addEventListener('resize', checkTruncation);
+
+    // Cleanup event listener
+    return () => window.removeEventListener('resize', checkTruncation);
+  }, [text]); // Re-run if text changes
+
+  const handleMouseEnter = () => {
+    if (isTruncated) {
+      setIsHovered(true);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+  return (
+    <div
+      ref={containerRef}
+      className="relative w-full overflow-hidden my-4 bg-purple-50 border border-purple-200 rounded-md p-2"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      <style>
+        {`
+        @keyframes marquee-reveal-on-hover {
+          from { transform: translateX(0); }
+          to { transform: translateX(calc(var(--scroll-dist) * -1px)); }
+        }
+        .truncated-text-content {
+          white-space: nowrap;
+          display: inline-block;
+          transform: translateX(0);
+          transition: transform 0.3s ease-out; /* Smooth transition for exit */
+        }
+        .truncated-text-content.is-truncated {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-width: 100%; /* Ensure ellipsis works within container */
+        }
+        .truncated-text-content.is-hovered {
+          overflow: visible; /* Allow text to extend beyond container for marquee */
+          text-overflow: clip; /* Remove ellipsis on hover */
+          animation: marquee-reveal-on-hover var(--animation-dur) linear forwards;
+        }
+        `}
+      </style>
+      <div
+        ref={textRef}
+        className={`truncated-text-content text-purple-800 text-lg font-medium
+          ${isTruncated && !isHovered ? 'is-truncated' : ''}
+          ${isHovered ? 'is-hovered' : ''}
+        `}
+        style={{
+          '--scroll-dist': scrollDistance,
+          '--animation-dur': animationDuration,
+        }}
+      >
+        {text}
+      </div>
+    </div>
+  );
+};
+
 export default EmployeeDetail;
