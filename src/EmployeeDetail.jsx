@@ -106,11 +106,11 @@ const EmployeeDetail = () => {
                         <div className='reporting-to-profile-picture-container'>
                           <img src={profilepicture40} class="responsive-image" alt="Employee Profile Picture"/>
                         </div>
-                        <div className='reporting-to-fullname_email-container'>
+                        <div className='reporting-to-fullname_email-container' style={{flex: 1}}>
                           <div className='reporting-to-fullname-text'>
                             Komang Priambada
                           </div>
-                          <div className='employee-email_title-text'>
+                          <div className='employee-email_title-text' style={{flex: 1}}>
                             komangpriambada@talentspace.id
                           </div>
                         </div>
@@ -178,24 +178,501 @@ const EmployeeDetail = () => {
               </div>
               <div className='table-row-container'>
                 <div className='skills-cell-container'>
-                  <div className='skills-name_level-container'>
-                    {/* Skill Name */}
-                    <div className='reporting-to-fullname-text' style={{ fontSize: '14px' }}>
-                    Design System {/* Change Skill Name Here */}
-                    </div>
-                    <div className='skills-level-container'>
-                      <div className='employee-email_title-text'>
-                        3 of 5 {/* Change Current Skill Level of Expected Here */}
+                  <div className='skills-name_progressbar'>
+                    <div className='skills-name_level-container'>
+                      {/* Skill Name */}
+                      <div className='reporting-to-fullname-text' style={{ fontSize: '14px', flex: 1 }}>
+                      Design System {/* Change Skill Name Here */}
                       </div>
-                      <div className="row-chips">
-                        {tableData.map(item => (
-                          <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(item.NSSG) }}>
-                            <span className='skill-gap-value'>
-                              {item.NSSG}
+                      <div className='skills-level-container'>
+                        <div className='employee-email_title-text' style={{ flex: 1 }}>
+                          3 of 5 {/* Change Current Skill Level of Expected Here */}
+                        </div>
+                        {/* <div className="row-chips">
+                          {tableData.map(item => (
+                            <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(item.NSSG) }}>
+                              <span className='skill-gap-value'>
+                                {item.NSSG}
+                              </span>
                             </span>
-                          </span>
-                        ))}
+                          ))}
+                        </div> */}
                       </div>
+                    </div>
+                    <div className='skill-progress-bar'>
+                      <div className='skill-progress-bar-fill' style={{background: '#C5FFD3', border: '1.5px solid #3FE266', width: '94%'}}></div>
+                    </div>
+                  </div>
+                </div>
+                <div className='skills-cell-container'>
+                  <div className='skills-name_progressbar'>
+                    <div className='skills-name_level-container'>
+                      {/* Skill Name */}
+                      <div className='reporting-to-fullname-text' style={{ fontSize: '14px', flex: 1 }}>
+                      Corporate Governance - Company Law & Corporate Secretarial Practice {/* Change Skill Name Here */}
+                      </div>
+                      <div className='skills-level-container'>
+                        <div className='employee-email_title-text' style={{ flex: 1 }}>
+                          3 of 5 {/* Change Current Skill Level of Expected Here */}
+                        </div>
+                        {/* <div className="row-chips">
+                          {tableData.map(item => (
+                            <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(item.NSSG) }}>
+                              <span className='skill-gap-value'>
+                                {item.NSSG}
+                              </span>
+                            </span>
+                          ))}
+                        </div> */}
+                      </div>
+                    </div>
+                    <div className='skill-progress-bar'>
+                      <div className='skill-progress-bar-fill' style={{background: '#FF484B', border: '1.5px solid #AA0F12', width: '39%'}}></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className='table-row-container'>
+                <div className='skills-cell-container'>
+                  <div className='skills-name_progressbar'>
+                    <div className='skills-name_level-container'>
+                      {/* Skill Name */}
+                      <div className='reporting-to-fullname-text' style={{ fontSize: '14px', flex: 1 }}>
+                      Design System {/* Change Skill Name Here */}
+                      </div>
+                      <div className='skills-level-container'>
+                        <div className='employee-email_title-text' style={{ flex: 1 }}>
+                          3 of 5 {/* Change Current Skill Level of Expected Here */}
+                        </div>
+                        {/* <div className="row-chips">
+                          {tableData.map(item => (
+                            <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(item.NSSG) }}>
+                              <span className='skill-gap-value'>
+                                {item.NSSG}
+                              </span>
+                            </span>
+                          ))}
+                        </div> */}
+                      </div>
+                    </div>
+                    <div className='skill-progress-bar'>
+                      <div className='skill-progress-bar-fill' style={{background: '#C5FFD3', border: '1.5px solid #3FE266', width: '94%'}}></div>
+                    </div>
+                  </div>
+                </div>
+                <div className='skills-cell-container'>
+                  <div className='skills-name_progressbar'>
+                    <div className='skills-name_level-container'>
+                      {/* Skill Name */}
+                      <div className='reporting-to-fullname-text' style={{ fontSize: '14px', flex: 1 }}>
+                      Corporate Governance - Company Law & Corporate Secretarial Practice {/* Change Skill Name Here */}
+                      </div>
+                      <div className='skills-level-container'>
+                        <div className='employee-email_title-text' style={{ flex: 1 }}>
+                          3 of 5 {/* Change Current Skill Level of Expected Here */}
+                        </div>
+                        {/* <div className="row-chips">
+                          {tableData.map(item => (
+                            <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(item.NSSG) }}>
+                              <span className='skill-gap-value'>
+                                {item.NSSG}
+                              </span>
+                            </span>
+                          ))}
+                        </div> */}
+                      </div>
+                    </div>
+                    <div className='skill-progress-bar'>
+                      <div className='skill-progress-bar-fill' style={{background: '#FF484B', border: '1.5px solid #AA0F12', width: '39%'}}></div>
+                    </div> </div>
+                </div>
+              </div>
+              <div className='table-row-container'>
+                <div className='skills-cell-container'>
+                  <div className='skills-name_progressbar'>
+                    <div className='skills-name_level-container'>
+                      {/* Skill Name */}
+                      <div className='reporting-to-fullname-text' style={{ fontSize: '14px', flex: 1 }}>
+                      Design System {/* Change Skill Name Here */}
+                      </div>
+                      <div className='skills-level-container'>
+                        <div className='employee-email_title-text' style={{ flex: 1 }}>
+                          3 of 5 {/* Change Current Skill Level of Expected Here */}
+                        </div>
+                        {/* <div className="row-chips">
+                          {tableData.map(item => (
+                            <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(item.NSSG) }}>
+                              <span className='skill-gap-value'>
+                                {item.NSSG}
+                              </span>
+                            </span>
+                          ))}
+                        </div> */}
+                      </div>
+                    </div>
+                    <div className='skill-progress-bar'>
+                      <div className='skill-progress-bar-fill' style={{background: '#C5FFD3', border: '1.5px solid #3FE266', width: '94%'}}></div>
+                    </div>
+                  </div>
+                </div>
+                <div className='skills-cell-container'>
+                  <div className='skills-name_progressbar'>
+                    <div className='skills-name_level-container'>
+                      {/* Skill Name */}
+                      <div className='reporting-to-fullname-text' style={{ fontSize: '14px', flex: 1 }}>
+                      Corporate Governance - Company Law & Corporate Secretarial Practice {/* Change Skill Name Here */}
+                      </div>
+                      <div className='skills-level-container'>
+                        <div className='employee-email_title-text' style={{ flex: 1 }}>
+                          3 of 5 {/* Change Current Skill Level of Expected Here */}
+                        </div>
+                        {/* <div className="row-chips">
+                          {tableData.map(item => (
+                            <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(item.NSSG) }}>
+                              <span className='skill-gap-value'>
+                                {item.NSSG}
+                              </span>
+                            </span>
+                          ))}
+                        </div> */}
+                      </div>
+                    </div>
+                    <div className='skill-progress-bar'>
+                      <div className='skill-progress-bar-fill' style={{background: '#FF484B', border: '1.5px solid #AA0F12', width: '39%'}}></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className='table-row-container'>
+                <div className='skills-cell-container'>
+                  <div className='skills-name_progressbar'>
+                    <div className='skills-name_level-container'>
+                      {/* Skill Name */}
+                      <div className='reporting-to-fullname-text' style={{ fontSize: '14px', flex: 1 }}>
+                      Design System {/* Change Skill Name Here */}
+                      </div>
+                      <div className='skills-level-container'>
+                        <div className='employee-email_title-text' style={{ flex: 1 }}>
+                          3 of 5 {/* Change Current Skill Level of Expected Here */}
+                        </div>
+                        {/* <div className="row-chips">
+                          {tableData.map(item => (
+                            <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(item.NSSG) }}>
+                              <span className='skill-gap-value'>
+                                {item.NSSG}
+                              </span>
+                            </span>
+                          ))}
+                        </div> */}
+                      </div>
+                    </div>
+                    <div className='skill-progress-bar'>
+                      <div className='skill-progress-bar-fill' style={{background: '#C5FFD3', border: '1.5px solid #3FE266', width: '94%'}}></div>
+                    </div>
+                  </div>
+                </div>
+                <div className='skills-cell-container'>
+                  <div className='skills-name_progressbar'>
+                    <div className='skills-name_level-container'>
+                      {/* Skill Name */}
+                      <div className='reporting-to-fullname-text' style={{ fontSize: '14px', flex: 1 }}>
+                      Corporate Governance - Company Law & Corporate Secretarial Practice {/* Change Skill Name Here */}
+                      </div>
+                      <div className='skills-level-container'>
+                        <div className='employee-email_title-text' style={{ flex: 1 }}>
+                          3 of 5 {/* Change Current Skill Level of Expected Here */}
+                        </div>
+                        {/* <div className="row-chips">
+                          {tableData.map(item => (
+                            <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(item.NSSG) }}>
+                              <span className='skill-gap-value'>
+                                {item.NSSG}
+                              </span>
+                            </span>
+                          ))}
+                        </div> */}
+                      </div>
+                    </div>
+                    <div className='skill-progress-bar'>
+                      <div className='skill-progress-bar-fill' style={{background: '#FF484B', border: '1.5px solid #AA0F12', width: '39%'}}></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className='table-row-container'>
+                <div className='skills-cell-container'>
+                  <div className='skills-name_progressbar'>
+                    <div className='skills-name_level-container'>
+                      {/* Skill Name */}
+                      <div className='reporting-to-fullname-text' style={{ fontSize: '14px', flex: 1 }}>
+                      Design System {/* Change Skill Name Here */}
+                      </div>
+                      <div className='skills-level-container'>
+                        <div className='employee-email_title-text' style={{ flex: 1 }}>
+                          3 of 5 {/* Change Current Skill Level of Expected Here */}
+                        </div>
+                        {/* <div className="row-chips">
+                          {tableData.map(item => (
+                            <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(item.NSSG) }}>
+                              <span className='skill-gap-value'>
+                                {item.NSSG}
+                              </span>
+                            </span>
+                          ))}
+                        </div> */}
+                      </div>
+                    </div>
+                    <div className='skill-progress-bar'>
+                      <div className='skill-progress-bar-fill' style={{background: '#C5FFD3', border: '1.5px solid #3FE266', width: '94%'}}></div>
+                    </div>
+                  </div>
+                </div>
+                <div className='skills-cell-container'>
+                  <div className='skills-name_progressbar'>
+                    <div className='skills-name_level-container'>
+                      {/* Skill Name */}
+                      <div className='reporting-to-fullname-text' style={{ fontSize: '14px', flex: 1 }}>
+                      Corporate Governance - Company Law & Corporate Secretarial Practice {/* Change Skill Name Here */}
+                      </div>
+                      <div className='skills-level-container'>
+                        <div className='employee-email_title-text' style={{ flex: 1 }}>
+                          3 of 5 {/* Change Current Skill Level of Expected Here */}
+                        </div>
+                        {/* <div className="row-chips">
+                          {tableData.map(item => (
+                            <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(item.NSSG) }}>
+                              <span className='skill-gap-value'>
+                                {item.NSSG}
+                              </span>
+                            </span>
+                          ))}
+                        </div> */}
+                      </div>
+                    </div>
+                    <div className='skill-progress-bar'>
+                      <div className='skill-progress-bar-fill' style={{background: '#FF484B', border: '1.5px solid #AA0F12', width: '39%'}}></div>
+                    </div> </div>
+                </div>
+              </div>
+              <div className='table-row-container'>
+                <div className='skills-cell-container'>
+                  <div className='skills-name_progressbar'>
+                    <div className='skills-name_level-container'>
+                      {/* Skill Name */}
+                      <div className='reporting-to-fullname-text' style={{ fontSize: '14px', flex: 1 }}>
+                      Design System {/* Change Skill Name Here */}
+                      </div>
+                      <div className='skills-level-container'>
+                        <div className='employee-email_title-text' style={{ flex: 1 }}>
+                          3 of 5 {/* Change Current Skill Level of Expected Here */}
+                        </div>
+                        {/* <div className="row-chips">
+                          {tableData.map(item => (
+                            <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(item.NSSG) }}>
+                              <span className='skill-gap-value'>
+                                {item.NSSG}
+                              </span>
+                            </span>
+                          ))}
+                        </div> */}
+                      </div>
+                    </div>
+                    <div className='skill-progress-bar'>
+                      <div className='skill-progress-bar-fill' style={{background: '#C5FFD3', border: '1.5px solid #3FE266', width: '94%'}}></div>
+                    </div>
+                  </div>
+                </div>
+                <div className='skills-cell-container'>
+                  <div className='skills-name_progressbar'>
+                    <div className='skills-name_level-container'>
+                      {/* Skill Name */}
+                      <div className='reporting-to-fullname-text' style={{ fontSize: '14px', flex: 1 }}>
+                      Corporate Governance - Company Law & Corporate Secretarial Practice {/* Change Skill Name Here */}
+                      </div>
+                      <div className='skills-level-container'>
+                        <div className='employee-email_title-text' style={{ flex: 1 }}>
+                          3 of 5 {/* Change Current Skill Level of Expected Here */}
+                        </div>
+                        {/* <div className="row-chips">
+                          {tableData.map(item => (
+                            <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(item.NSSG) }}>
+                              <span className='skill-gap-value'>
+                                {item.NSSG}
+                              </span>
+                            </span>
+                          ))}
+                        </div> */}
+                      </div>
+                    </div>
+                    <div className='skill-progress-bar'>
+                      <div className='skill-progress-bar-fill' style={{background: '#FF484B', border: '1.5px solid #AA0F12', width: '39%'}}></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className='table-row-container'>
+                <div className='skills-cell-container'>
+                  <div className='skills-name_progressbar'>
+                    <div className='skills-name_level-container'>
+                      {/* Skill Name */}
+                      <div className='reporting-to-fullname-text' style={{ fontSize: '14px', flex: 1 }}>
+                      Design System {/* Change Skill Name Here */}
+                      </div>
+                      <div className='skills-level-container'>
+                        <div className='employee-email_title-text' style={{ flex: 1 }}>
+                          3 of 5 {/* Change Current Skill Level of Expected Here */}
+                        </div>
+                        {/* <div className="row-chips">
+                          {tableData.map(item => (
+                            <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(item.NSSG) }}>
+                              <span className='skill-gap-value'>
+                                {item.NSSG}
+                              </span>
+                            </span>
+                          ))}
+                        </div> */}
+                      </div>
+                    </div>
+                    <div className='skill-progress-bar'>
+                      <div className='skill-progress-bar-fill' style={{background: '#C5FFD3', border: '1.5px solid #3FE266', width: '94%'}}></div>
+                    </div>
+                  </div>
+                </div>
+                <div className='skills-cell-container'>
+                  <div className='skills-name_progressbar'>
+                    <div className='skills-name_level-container'>
+                      {/* Skill Name */}
+                      <div className='reporting-to-fullname-text' style={{ fontSize: '14px', flex: 1 }}>
+                      Corporate Governance - Company Law & Corporate Secretarial Practice {/* Change Skill Name Here */}
+                      </div>
+                      <div className='skills-level-container'>
+                        <div className='employee-email_title-text' style={{ flex: 1 }}>
+                          3 of 5 {/* Change Current Skill Level of Expected Here */}
+                        </div>
+                        {/* <div className="row-chips">
+                          {tableData.map(item => (
+                            <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(item.NSSG) }}>
+                              <span className='skill-gap-value'>
+                                {item.NSSG}
+                              </span>
+                            </span>
+                          ))}
+                        </div> */}
+                      </div>
+                    </div>
+                    <div className='skill-progress-bar'>
+                      <div className='skill-progress-bar-fill' style={{background: '#FF484B', border: '1.5px solid #AA0F12', width: '39%'}}></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className='table-row-container'>
+                <div className='skills-cell-container'>
+                  <div className='skills-name_progressbar'>
+                    <div className='skills-name_level-container'>
+                      {/* Skill Name */}
+                      <div className='reporting-to-fullname-text' style={{ fontSize: '14px', flex: 1 }}>
+                      Design System {/* Change Skill Name Here */}
+                      </div>
+                      <div className='skills-level-container'>
+                        <div className='employee-email_title-text' style={{ flex: 1 }}>
+                          3 of 5 {/* Change Current Skill Level of Expected Here */}
+                        </div>
+                        {/* <div className="row-chips">
+                          {tableData.map(item => (
+                            <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(item.NSSG) }}>
+                              <span className='skill-gap-value'>
+                                {item.NSSG}
+                              </span>
+                            </span>
+                          ))}
+                        </div> */}
+                      </div>
+                    </div>
+                    <div className='skill-progress-bar'>
+                      <div className='skill-progress-bar-fill' style={{background: '#C5FFD3', border: '1.5px solid #3FE266', width: '94%'}}></div>
+                    </div>
+                  </div>
+                </div>
+                <div className='skills-cell-container'>
+                  <div className='skills-name_progressbar'>
+                    <div className='skills-name_level-container'>
+                      {/* Skill Name */}
+                      <div className='reporting-to-fullname-text' style={{ fontSize: '14px', flex: 1 }}>
+                      Corporate Governance - Company Law & Corporate Secretarial Practice {/* Change Skill Name Here */}
+                      </div>
+                      <div className='skills-level-container'>
+                        <div className='employee-email_title-text' style={{ flex: 1 }}>
+                          3 of 5 {/* Change Current Skill Level of Expected Here */}
+                        </div>
+                        {/* <div className="row-chips">
+                          {tableData.map(item => (
+                            <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(item.NSSG) }}>
+                              <span className='skill-gap-value'>
+                                {item.NSSG}
+                              </span>
+                            </span>
+                          ))}
+                        </div> */}
+                      </div>
+                    </div>
+                    <div className='skill-progress-bar'>
+                      <div className='skill-progress-bar-fill' style={{background: '#FF484B', border: '1.5px solid #AA0F12', width: '39%'}}></div>
+                    </div> </div>
+                </div>
+              </div>
+              <div className='table-row-container'>
+                <div className='skills-cell-container'>
+                  <div className='skills-name_progressbar'>
+                    <div className='skills-name_level-container'>
+                      {/* Skill Name */}
+                      <div className='reporting-to-fullname-text' style={{ fontSize: '14px', flex: 1 }}>
+                      Design System {/* Change Skill Name Here */}
+                      </div>
+                      <div className='skills-level-container'>
+                        <div className='employee-email_title-text' style={{ flex: 1 }}>
+                          3 of 5 {/* Change Current Skill Level of Expected Here */}
+                        </div>
+                        {/* <div className="row-chips">
+                          {tableData.map(item => (
+                            <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(item.NSSG) }}>
+                              <span className='skill-gap-value'>
+                                {item.NSSG}
+                              </span>
+                            </span>
+                          ))}
+                        </div> */}
+                      </div>
+                    </div>
+                    <div className='skill-progress-bar'>
+                      <div className='skill-progress-bar-fill' style={{background: '#C5FFD3', border: '1.5px solid #3FE266', width: '94%'}}></div>
+                    </div>
+                  </div>
+                </div>
+                <div className='skills-cell-container'>
+                  <div className='skills-name_progressbar'>
+                    <div className='skills-name_level-container'>
+                      {/* Skill Name */}
+                      <div className='reporting-to-fullname-text' style={{ fontSize: '14px', flex: 1 }}>
+                      Corporate Governance - Company Law & Corporate Secretarial Practice {/* Change Skill Name Here */}
+                      </div>
+                      <div className='skills-level-container'>
+                        <div className='employee-email_title-text' style={{ flex: 1 }}>
+                          3 of 5 {/* Change Current Skill Level of Expected Here */}
+                        </div>
+                        {/* <div className="row-chips">
+                          {tableData.map(item => (
+                            <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(item.NSSG) }}>
+                              <span className='skill-gap-value'>
+                                {item.NSSG}
+                              </span>
+                            </span>
+                          ))}
+                        </div> */}
+                      </div>
+                    </div>
+                    <div className='skill-progress-bar'>
+                      <div className='skill-progress-bar-fill' style={{background: '#FF484B', border: '1.5px solid #AA0F12', width: '39%'}}></div>
                     </div>
                   </div>
                 </div>

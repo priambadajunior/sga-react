@@ -2,6 +2,10 @@ import React from 'react';
 import './EmployeeList.css'; // Import the CSS file
 import fullscreen from './assets/fullscreen.svg';
 import profilepicture40 from './assets/profilepicture40.svg';
+import SortIcon from './SortFunction';
+import sortIcon from './assets/sort.svg';
+import sortAscendingIcon from './assets/sort-ascending.svg';
+import sortDescendingIcon from './assets/sort-descending.svg';
 import { useNavigate } from 'react-router-dom';
 
 // Sample data for the table - replace with your actual data
