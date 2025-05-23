@@ -10,11 +10,19 @@ import openprofile from './assets/openprofile.svg';
 import fullscreen from './assets/fullscreen.svg';
 
 const EmployeeDetail = () => {
+  const handleBackClick = () => {
+    window.history.back();
+  }
     return ( 
       <div className='employee-detail-container'>
         <div className='detail-header-container'>
           <div className='header-inner-container'>
-            <img src={back} alt="Back to Employee List"/>
+            <img 
+              src={back}
+              alt="Back to Employee List"
+              onClick={handleBackClick}
+              style={{cursor: 'pointer'}}
+           />
             <div className='header-text-previous-menu'>
               Employee
             </div>
