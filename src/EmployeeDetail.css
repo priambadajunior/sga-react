@@ -377,10 +377,35 @@ flex-grow: 0;
   order: 0;
   align-self: stretch;
   flex-grow: 0;
+  overflow-y: auto;
 }
 
+/* For WebKit browsers (Chrome, Safari, Edge, Opera) */
+.employee-details-bottom-container::-webkit-scrollbar {
+  width: 8px; /* **Crucial:** Reserve space for the scrollbar to prevent layout shift */
+  /* background-color: transparent; Make the scrollbar track transparent by default */
+}
+
+.employee-details-bottom-container::-webkit-scrollbar-thumb {
+  /* background-color: transparent; Make the scrollbar thumb transparent by default */
+  border-radius: 100px; /* Optional: adds rounded corners to the thumb */
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* When the container is hovered, make the scrollbar visible */
 .employee-details-bottom-container:hover {
-  overflow-y: auto;
+  /* For Firefox and other modern browsers, show a thin scrollbar */
+  scrollbar-width: 100%;
+}
+
+.employee-details-bottom-container:hover::-webkit-scrollbar-thumb {
+  /* For WebKit browsers, make the thumb visible with a semi-transparent color */
+  background-color: #35353530; /* Adjust color and opacity as desired */
+}
+
+/* Optional: Add a smooth transition for the scrollbar appearance */
+.employee-details-bottom-container::-webkit-scrollbar-thumb {
+  transition: background-color 0.3s ease-in;
 }
 
 .employee-details-section-container {
@@ -748,7 +773,40 @@ flex-grow: 0;
   order: 0;
   align-self: stretch;
   flex-grow: 0;
-  overflow-y: auto;
+
+  /* Set a max-height to enable scrolling when content overflows */
+  overflow-y: auto; /* Show scrollbar only when content exceeds max-height */
+
+  /* For Firefox and other modern browsers (standard way to hide scrollbar) */
+  /* scrollbar-width: 0px;  */
+}
+
+/* For WebKit browsers (Chrome, Safari, Edge, Opera) */
+.skills-table-container::-webkit-scrollbar {
+  width: 8px; /* **Crucial:** Reserve space for the scrollbar to prevent layout shift */
+  /* background-color: transparent; Make the scrollbar track transparent by default */
+}
+
+.skills-table-container::-webkit-scrollbar-thumb {
+  /* background-color: transparent; Make the scrollbar thumb transparent by default */
+  border-radius: 100px; /* Optional: adds rounded corners to the thumb */
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* When the container is hovered, make the scrollbar visible */
+.skills-table-container:hover {
+  /* For Firefox and other modern browsers, show a thin scrollbar */
+  scrollbar-width: 100%;
+}
+
+.skills-table-container:hover::-webkit-scrollbar-thumb {
+  /* For WebKit browsers, make the thumb visible with a semi-transparent color */
+  background-color: #35353530; /* Adjust color and opacity as desired */
+}
+
+/* Optional: Add a smooth transition for the scrollbar appearance */
+.skills-table-container::-webkit-scrollbar-thumb {
+  transition: background-color 0.3s ease-in;
 }
 
 .table-title-container {
