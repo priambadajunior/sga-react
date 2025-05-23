@@ -188,15 +188,9 @@ const EmployeeDetail = () => {
                         <div className='employee-email_title-text' style={{ flex: 1 }}>
                           3 of 5 {/* Change Current Skill Level of Expected Here */}
                         </div>
-                        {/* <div className="row-chips">
-                          {tableData.map(item => (
-                            <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(item.NSSG) }}>
-                              <span className='skill-gap-value'>
-                                {item.NSSG}
-                              </span>
-                            </span>
-                          ))}
-                        </div> */}
+                        <div className="skill-gap-chips">
+                          <div className="skill-gap-value">6%</div>
+                        </div>
                       </div>
                     </div>
                     <div className='skill-progress-bar'>
@@ -215,15 +209,9 @@ const EmployeeDetail = () => {
                         <div className='employee-email_title-text' style={{ flex: 1 }}>
                           3 of 5 {/* Change Current Skill Level of Expected Here */}
                         </div>
-                        {/* <div className="row-chips">
-                          {tableData.map(item => (
-                            <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(item.NSSG) }}>
-                              <span className='skill-gap-value'>
-                                {item.NSSG}
-                              </span>
-                            </span>
-                          ))}
-                        </div> */}
+                        <div className="skill-gap-chips">
+                          <div className="skill-gap-value">6%</div>
+                        </div>
                       </div>
                     </div>
                     <div className='skill-progress-bar'>
@@ -244,15 +232,9 @@ const EmployeeDetail = () => {
                         <div className='employee-email_title-text' style={{ flex: 1 }}>
                           3 of 5 {/* Change Current Skill Level of Expected Here */}
                         </div>
-                        {/* <div className="row-chips">
-                          {tableData.map(item => (
-                            <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(item.NSSG) }}>
-                              <span className='skill-gap-value'>
-                                {item.NSSG}
-                              </span>
-                            </span>
-                          ))}
-                        </div> */}
+                        <div className="skill-gap-chips">
+                          <div className="skill-gap-value">6%</div>
+                        </div>
                       </div>
                     </div>
                     <div className='skill-progress-bar'>
@@ -271,15 +253,9 @@ const EmployeeDetail = () => {
                         <div className='employee-email_title-text' style={{ flex: 1 }}>
                           3 of 5 {/* Change Current Skill Level of Expected Here */}
                         </div>
-                        {/* <div className="row-chips">
-                          {tableData.map(item => (
-                            <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(item.NSSG) }}>
-                              <span className='skill-gap-value'>
-                                {item.NSSG}
-                              </span>
-                            </span>
-                          ))}
-                        </div> */}
+                        <div className="skill-gap-chips">
+                          <div className="skill-gap-value">6%</div>
+                        </div>
                       </div>
                     </div>
                     <div className='skill-progress-bar'>
@@ -299,15 +275,9 @@ const EmployeeDetail = () => {
                         <div className='employee-email_title-text' style={{ flex: 1 }}>
                           3 of 5 {/* Change Current Skill Level of Expected Here */}
                         </div>
-                        {/* <div className="row-chips">
-                          {tableData.map(item => (
-                            <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(item.NSSG) }}>
-                              <span className='skill-gap-value'>
-                                {item.NSSG}
-                              </span>
-                            </span>
-                          ))}
-                        </div> */}
+                        <div className="skill-gap-chips">
+                          <div className="skill-gap-value">6%</div>
+                        </div>
                       </div>
                     </div>
                     <div className='skill-progress-bar'>
@@ -326,15 +296,9 @@ const EmployeeDetail = () => {
                         <div className='employee-email_title-text' style={{ flex: 1 }}>
                           3 of 5 {/* Change Current Skill Level of Expected Here */}
                         </div>
-                        {/* <div className="row-chips">
-                          {tableData.map(item => (
-                            <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(item.NSSG) }}>
-                              <span className='skill-gap-value'>
-                                {item.NSSG}
-                              </span>
-                            </span>
-                          ))}
-                        </div> */}
+                        <div className="skill-gap-chips">
+                          <div className="skill-gap-value">6%</div>
+                        </div>
                       </div>
                     </div>
                     <div className='skill-progress-bar'>
@@ -355,15 +319,9 @@ const EmployeeDetail = () => {
                         <div className='employee-email_title-text' style={{ flex: 1 }}>
                           3 of 5 {/* Change Current Skill Level of Expected Here */}
                         </div>
-                        {/* <div className="row-chips">
-                          {tableData.map(item => (
-                            <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(item.NSSG) }}>
-                              <span className='skill-gap-value'>
-                                {item.NSSG}
-                              </span>
-                            </span>
-                          ))}
-                        </div> */}
+                        <div className="skill-gap-chips">
+                          <div className="skill-gap-value">6%</div>
+                        </div>
                       </div>
                     </div>
                     <div className='skill-progress-bar'>
@@ -382,15 +340,9 @@ const EmployeeDetail = () => {
                         <div className='employee-email_title-text' style={{ flex: 1 }}>
                           3 of 5 {/* Change Current Skill Level of Expected Here */}
                         </div>
-                        {/* <div className="row-chips">
-                          {tableData.map(item => (
-                            <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(item.NSSG) }}>
-                              <span className='skill-gap-value'>
-                                {item.NSSG}
-                              </span>
-                            </span>
-                          ))}
-                        </div> */}
+                        <div className="skill-gap-chips">
+                          <div className="skill-gap-value">6%</div>
+                        </div>
                       </div>
                     </div>
                     <div className='skill-progress-bar'>
@@ -411,15 +363,9 @@ const EmployeeDetail = () => {
                         <div className='employee-email_title-text' style={{ flex: 1 }}>
                           3 of 5 {/* Change Current Skill Level of Expected Here */}
                         </div>
-                        {/* <div className="row-chips">
-                          {tableData.map(item => (
-                            <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(item.NSSG) }}>
-                              <span className='skill-gap-value'>
-                                {item.NSSG}
-                              </span>
-                            </span>
-                          ))}
-                        </div> */}
+                        <div className="skill-gap-chips">
+                          <div className="skill-gap-value">6%</div>
+                        </div>
                       </div>
                     </div>
                     <div className='skill-progress-bar'>
@@ -438,15 +384,9 @@ const EmployeeDetail = () => {
                         <div className='employee-email_title-text' style={{ flex: 1 }}>
                           3 of 5 {/* Change Current Skill Level of Expected Here */}
                         </div>
-                        {/* <div className="row-chips">
-                          {tableData.map(item => (
-                            <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(item.NSSG) }}>
-                              <span className='skill-gap-value'>
-                                {item.NSSG}
-                              </span>
-                            </span>
-                          ))}
-                        </div> */}
+                        <div className="skill-gap-chips">
+                          <div className="skill-gap-value">6%</div>
+                        </div>
                       </div>
                     </div>
                     <div className='skill-progress-bar'>
@@ -466,15 +406,9 @@ const EmployeeDetail = () => {
                         <div className='employee-email_title-text' style={{ flex: 1 }}>
                           3 of 5 {/* Change Current Skill Level of Expected Here */}
                         </div>
-                        {/* <div className="row-chips">
-                          {tableData.map(item => (
-                            <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(item.NSSG) }}>
-                              <span className='skill-gap-value'>
-                                {item.NSSG}
-                              </span>
-                            </span>
-                          ))}
-                        </div> */}
+                        <div className="skill-gap-chips">
+                          <div className="skill-gap-value">6%</div>
+                        </div>
                       </div>
                     </div>
                     <div className='skill-progress-bar'>
@@ -493,15 +427,9 @@ const EmployeeDetail = () => {
                         <div className='employee-email_title-text' style={{ flex: 1 }}>
                           3 of 5 {/* Change Current Skill Level of Expected Here */}
                         </div>
-                        {/* <div className="row-chips">
-                          {tableData.map(item => (
-                            <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(item.NSSG) }}>
-                              <span className='skill-gap-value'>
-                                {item.NSSG}
-                              </span>
-                            </span>
-                          ))}
-                        </div> */}
+                        <div className="skill-gap-chips">
+                          <div className="skill-gap-value">6%</div>
+                        </div>
                       </div>
                     </div>
                     <div className='skill-progress-bar'>
@@ -522,15 +450,9 @@ const EmployeeDetail = () => {
                         <div className='employee-email_title-text' style={{ flex: 1 }}>
                           3 of 5 {/* Change Current Skill Level of Expected Here */}
                         </div>
-                        {/* <div className="row-chips">
-                          {tableData.map(item => (
-                            <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(item.NSSG) }}>
-                              <span className='skill-gap-value'>
-                                {item.NSSG}
-                              </span>
-                            </span>
-                          ))}
-                        </div> */}
+                        <div className="skill-gap-chips">
+                          <div className="skill-gap-value">6%</div>
+                        </div>
                       </div>
                     </div>
                     <div className='skill-progress-bar'>
@@ -549,15 +471,9 @@ const EmployeeDetail = () => {
                         <div className='employee-email_title-text' style={{ flex: 1 }}>
                           3 of 5 {/* Change Current Skill Level of Expected Here */}
                         </div>
-                        {/* <div className="row-chips">
-                          {tableData.map(item => (
-                            <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(item.NSSG) }}>
-                              <span className='skill-gap-value'>
-                                {item.NSSG}
-                              </span>
-                            </span>
-                          ))}
-                        </div> */}
+                        <div className="skill-gap-chips">
+                          <div className="skill-gap-value">6%</div>
+                        </div>
                       </div>
                     </div>
                     <div className='skill-progress-bar'>
@@ -578,15 +494,9 @@ const EmployeeDetail = () => {
                         <div className='employee-email_title-text' style={{ flex: 1 }}>
                           3 of 5 {/* Change Current Skill Level of Expected Here */}
                         </div>
-                        {/* <div className="row-chips">
-                          {tableData.map(item => (
-                            <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(item.NSSG) }}>
-                              <span className='skill-gap-value'>
-                                {item.NSSG}
-                              </span>
-                            </span>
-                          ))}
-                        </div> */}
+                        <div className="skill-gap-chips">
+                          <div className="skill-gap-value">6%</div>
+                        </div>
                       </div>
                     </div>
                     <div className='skill-progress-bar'>
@@ -605,15 +515,9 @@ const EmployeeDetail = () => {
                         <div className='employee-email_title-text' style={{ flex: 1 }}>
                           3 of 5 {/* Change Current Skill Level of Expected Here */}
                         </div>
-                        {/* <div className="row-chips">
-                          {tableData.map(item => (
-                            <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(item.NSSG) }}>
-                              <span className='skill-gap-value'>
-                                {item.NSSG}
-                              </span>
-                            </span>
-                          ))}
-                        </div> */}
+                        <div className="skill-gap-chips">
+                          <div className="skill-gap-value">6%</div>
+                        </div>
                       </div>
                     </div>
                     <div className='skill-progress-bar'>
@@ -633,15 +537,9 @@ const EmployeeDetail = () => {
                         <div className='employee-email_title-text' style={{ flex: 1 }}>
                           3 of 5 {/* Change Current Skill Level of Expected Here */}
                         </div>
-                        {/* <div className="row-chips">
-                          {tableData.map(item => (
-                            <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(item.NSSG) }}>
-                              <span className='skill-gap-value'>
-                                {item.NSSG}
-                              </span>
-                            </span>
-                          ))}
-                        </div> */}
+                        <div className="skill-gap-chips">
+                          <div className="skill-gap-value">6%</div>
+                        </div>
                       </div>
                     </div>
                     <div className='skill-progress-bar'>
@@ -660,15 +558,9 @@ const EmployeeDetail = () => {
                         <div className='employee-email_title-text' style={{ flex: 1 }}>
                           3 of 5 {/* Change Current Skill Level of Expected Here */}
                         </div>
-                        {/* <div className="row-chips">
-                          {tableData.map(item => (
-                            <span className="skill-gap-chips" style={{ backgroundColor: getBackgroundColor(item.NSSG) }}>
-                              <span className='skill-gap-value'>
-                                {item.NSSG}
-                              </span>
-                            </span>
-                          ))}
-                        </div> */}
+                        <div className="skill-gap-chips">
+                          <div className="skill-gap-value">6%</div>
+                        </div>
                       </div>
                     </div>
                     <div className='skill-progress-bar'>

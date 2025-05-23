@@ -748,11 +748,7 @@ flex-grow: 0;
   order: 0;
   align-self: stretch;
   flex-grow: 0;
-}
-
-.skills-table-container:hover {
   overflow-y: auto;
-  overflow-x: hidden;
 }
 
 .table-title-container {
@@ -931,4 +927,33 @@ flex-grow: 0;
   flex: none;
   order: 0;
   flex-grow: 1;
+}
+
+.skill-gap-chips{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 12px;
+  gap: 4px;
+
+  width: 64px;
+  height: 25px;
+
+  background: #C5FFD3;
+  border-radius: 1000px;
+}
+.skill-gap-value{
+  width: 22px;
+  height: 17px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.01em;
+  text-align: center;
+
+  color: #353535;
 }
