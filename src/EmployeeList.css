@@ -57,7 +57,7 @@
 
 /* /* Employee List */ /* Title */
 .table-name {
-  width: auto;
+  width: 100%;
   height: 24px;
   font-style: normal;
   font-weight: 700;
