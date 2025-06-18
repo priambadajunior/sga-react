@@ -1,7 +1,7 @@
 import './SearchBar.css'; // Import the CSS file
 import search from './assets/search.svg';
 
-export const EmployeeList = () => {
+export const SearchBar = () => {
   return (
     <div className="search-bar">
       <div className="search-bar-icon">
