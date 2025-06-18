@@ -1,3 +1,4 @@
+import './SearchBar.css'; // Import the CSS file
 import search from './assets/search.svg';
 import './SearchBar.css';
 
