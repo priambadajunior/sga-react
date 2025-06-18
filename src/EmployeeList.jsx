@@ -61,12 +61,12 @@ export const EmployeeList = () => {
       <div className="header-container">
         <div className="header">
           <div className="table-name">Employee List</div>
+          <div className="search-bar">
+            <SearchBar setSearchQuery={setSearchQuery} />
+          </div>
           <div className="header-fullscreen-icon">
               <img src={fullscreen} alt="View table in full screen"/>
           </div>
-        </div>
-        <div style={{ marginTop: 16 }}>
-          <SearchBar setSearchQuery={setSearchQuery} />
         </div>
       </div>
 

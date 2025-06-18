@@ -29,7 +29,7 @@
 .search-hint-text{
   /* Label */
 
-  width: 100%;
+  width: fit-content;
   height: 16px;
   align-items: left;
 
