@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState  } from 'react';
 import './EmployeeList.css'; // Import the CSS file
 import fullscreen from './assets/fullscreen.svg';
 import profilepicture40 from './assets/profilepicture40.svg';
@@ -7,6 +7,7 @@ import sortIcon from './assets/sort.svg';
 import sortAscendingIcon from './assets/sort-ascending.svg';
 import sortDescendingIcon from './assets/sort-descending.svg';
 import { useNavigate } from 'react-router-dom';
+import SearchBar from './SearchBar';
 
 // Sample data for the table - replace with your actual data
 // Assuming each object represents a row with data for both columns
@@ -41,8 +42,13 @@ export const getBackgroundColor = (value) => {
 
 export const EmployeeList = () => {
 
-
+  const [searchQuery, setSearchQuery] = useState('');
   const navigate = useNavigate();
+
+  const filteredData = tableData.filter(row =>
+    [row.division, row.role, row.eeid, row.name, row.email]
+      .some(field => field.toLowerCase().includes(searchQuery.toLowerCase()))
+  );
 
   const handleRowClick = (eeid) => {
     navigate(`/employee/${eeid}`);
@@ -58,6 +64,9 @@ export const EmployeeList = () => {
           <div className="header-fullscreen-icon">
               <img src={fullscreen} alt="View table in full screen"/>
           </div>
+        </div>
+        <div style={{ marginTop: 16 }}>
+          <SearchBar setSearchQuery={setSearchQuery} />
         </div>
       </div>
 
