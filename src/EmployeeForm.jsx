@@ -6,6 +6,10 @@ import profilepicture40 from './assets/profilepicture40.svg';
 import numbersquaretwo from './assets/NumberSquareTwo.svg';
 import numbersquareone from './assets/NumberSquareOne.svg';
 import openprofile from './assets/openprofile.svg';
+import PlusCircle from './assets/PlusCircle.svg';
+import search from './assets/search.svg';
+import profilepicture120_placeholder from './assets/profilepicture120_placeholder.svg';
+import profilepicture40_placeholder from './assets/profilepicture40_placeholder.svg';
 
 const EmployeeForm = () => {
   const handleBackClick = () => {
@@ -29,13 +33,7 @@ const EmployeeForm = () => {
             </div>
             <div className='header-eeid_fullname-container'>
               <div className='header-text-current-employee'>
-                00413
-              </div>
-              <div className='header-text-current-employee'>
-                -
-              </div>
-              <div className='header-text-current-employee'>
-                Kadek Wikananda Laksmana
+                Add Employee
               </div>
             </div>
           </div>
@@ -48,21 +46,21 @@ const EmployeeForm = () => {
                 </div>
                 <div className='employee-profile-pp-row-container'>
                   <div className='employee-profile-picture-container'>
-                  <img src={profilepicture} alt="Employee Profile Picture"/>
+                  <img src={profilepicture120_placeholder} alt="Employee Profile Picture"/>
                   </div>
                 </div>
               </div>
               <div className='employee-profile-details-container'>
                 <div className='employee-ID-chips'>
                   <div className='employee-ID-chips-text'>#</div>
-                  <div className='employee-ID-chips-text'>00143</div>
+                  <div className='employee-ID-chips-text'>Employee ID</div>
                 </div>
                 <div className='employee-fullname_email-container'>
                   <div className='employee-fullname-text'>
-                    Kadek Wikananda Laksmana
+                    Employee Full Name
                   </div>
                   <div className='employee-email_title-text'>
-                    priambadajunior@talentspace.id
+                    Employee Email
                   </div>
                 </div>
               </div>
@@ -73,7 +71,7 @@ const EmployeeForm = () => {
                   JOIN DATE
                 </div>
                 <div className='employee-details-text'>
-                  11 Oct 2021 (3 years 5 months 12 days)
+                  Employee Join Date
                 </div>
               </div>
               <div className='employee-details-section-container'>
@@ -81,7 +79,7 @@ const EmployeeForm = () => {
                   DIVISION
                 </div>
                 <div className='employee-details-text'>
-                  Product Design
+                  Employee Division
                 </div>
               </div>
               <div className='employee-details-section-container'>
@@ -89,7 +87,7 @@ const EmployeeForm = () => {
                   POSITION
                 </div>
                 <div className='employee-details-text'>
-                  Senior UI/UX Designer
+                  Employee Position
                 </div>
               </div>
               <div className='employee-details-section-container'>
@@ -102,33 +100,7 @@ const EmployeeForm = () => {
                       <div className='reporting-to-position_icon-container'>
                         <div className='reporting-to-position-container'>
                           <div className='reporting-to-position-text'>
-                            CHIEF EXECUTIVE OFFICER
-                          </div>
-                          <img src={numbersquaretwo} alt="2nd Level"/>
-                        </div>
-                        <img src={openprofile} alt="Open Profile"/>
-                      </div>
-                      <div className='reporting-to-pp_details-container'>
-                        <div className='reporting-to-profile-picture-container'>
-                          <img src={profilepicture40} class="responsive-image" alt="Employee Profile Picture"/>
-                        </div>
-                        <div className='reporting-to-fullname_email-container' style={{overflow: "hidden", flex: 1}}>
-                          <div className='reporting-to-fullname-text'>
-                            Komang Priambada
-                          </div>
-                          <div className='employee-email_title-text' style={{overflow: 'hidden', flex: 1}}>
-                            <TruncatedMarqueeOnHover text="komangpriambada@talentspace.id"/>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className='reporting-to-inner-container'>
-                    <div className='reporting-to-details-container'>
-                      <div className='reporting-to-position_icon-container'>
-                        <div className='reporting-to-position-container'>
-                          <div className='reporting-to-position-text'>
-                            HEAD OF DESIGN
+                            SUPERVISOR POSITION
                           </div>
                           <img src={numbersquareone} alt="1st Level"/>
                         </div>
@@ -136,14 +108,14 @@ const EmployeeForm = () => {
                       </div>
                       <div className='reporting-to-pp_details-container'>
                         <div className='reporting-to-profile-picture-container'>
-                          <img src={profilepicture40} class="responsive-image" alt="Employee Profile Picture"/>
+                          <img src={profilepicture40_placeholder} class="responsive-image" alt="Employee Profile Picture"/>
                         </div>
                         <div className='reporting-to-fullname_email-container' style={{overflow: "hidden", flex: 1}}>
                           <div className='reporting-to-fullname-text'>
-                            Daniel Febryan Dewanda
+                            Supervisor Name
                           </div>
                           <div className='employee-email_title-text' style={{overflow: 'hidden', flex: 1}}>
-                            <TruncatedMarqueeOnHover text="danielfebryandewanda@talentspace.id"/>
+                            <TruncatedMarqueeOnHover text="Supervisor Email"/>
                           </div>
                         </div>
                       </div>
@@ -177,15 +149,18 @@ const EmployeeForm = () => {
                 </div>
               </div>
               <div className='horizontal-input-fields'>
-                <div className='input-field-structure'>
-                  <div className='input-field-employeeid'>
+                <div className='input-field-structure'
+                style={{ width: 'fit-content'}}
+                >
+                  <div className='input-field-label'>Employee ID</div>
+                  <div className='input-field-employeeid-container'>
                     <div className='input-field-employeeid-prefix-container'>
                       <div className='input-field-employeeid-prefix-text'>
                         #
                       </div>
-                      <div className='input-field-original'>
-                        <div className='input-field-hint-text'>000000</div>
-                      </div>
+                    </div>
+                    <div className='input-field-employeeid'>
+                      <div className='input-field-hint-text'>000000</div>
                     </div>
                   </div>
                 </div>
@@ -216,10 +191,58 @@ const EmployeeForm = () => {
                   </div>
                 </div>
               </div>
+              <div className='input-field-structure'>
+                <div className='input-field-label'>Skills</div>
+                  <div className='skills-container'>
+                    <div className='skills-list'>
+                      <div className='skills-chips'>
+                        <div className='skills-chips-text'>
+                          Artificial Intelligence (AI) & Machine Learning (ML)
+                        </div>
+                      </div>
+                      <div className='skills-chips'>
+                        <div className='skills-chips-text'>
+                          Artificial Intelligence (AI) & Machine Learning (ML)
+                        </div>
+                      </div>
+                      <div className='skills-chips'>
+                        <div className='skills-chips-text'>
+                          Artificial Intelligence (AI) & Machine Learning (ML)
+                        </div>
+                      </div>
+                      <div className='skills-chips'>
+                        <div className='skills-chips-text'>
+                          Artificial Intelligence (AI) & Machine Learning (ML)
+                        </div>
+                      </div>
+                    </div>
+                    <div className='button-add-skill-container'>
+                      <img src={PlusCircle} alt="Add"></img>
+                      <div className='button-add-skill-text'>Add Skill</div>
+                    </div>
+                    <div className='skills-popover'>
+                      <div className='skills-popover-search'>
+                        <img src={search} alt="Search"></img>
+                        <div className='skills-popover-search-text'>Search Skill</div>
+                      </div>
+                      <div className='skills-popover-results'>
+                        <div className='skills-popover-results-text'>
+                          Artificial Intelligence (AI) & Machine Learning (ML)
+                        </div>
+                        <div className='skills-popover-results-text'>
+                          Artificial Intelligence (AI) & Machine Learning (ML)
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
             </div>
+            <div className='button-submit-container'>
+              <div className='button-submit-text'>Submit</div>
+            </div>
+          </div>
         </div>
+      </div>
     )
 };
   
